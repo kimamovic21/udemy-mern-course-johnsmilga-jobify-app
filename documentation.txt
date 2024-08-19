@@ -37,3 +37,7 @@ Section 02: VS Code
 12. Global CSS
 -u index.css fajl dodan CSS stil potreban za projekt
 -u folderu assets izbrisemo README.md fajl
+
+13. Title and Favicon
+-u folder public dodajemo sliku favicon.ico
+-u index.html fajl dodajemo sliku favicon.ico
