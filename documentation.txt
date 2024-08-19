@@ -60,7 +60,9 @@ Section 02: VS Code
 -u folderu pages kreiramo jsx komponente
 -u komponentu App.jsx importujemo kreirane komponente
 
-
 18. Setup index.js
 -u index.js fajlu eksportujemo kreirane komponente
 -u komponentu App.jsx importujemo komponente iz index.js fajla
+
+19. Link Component
+-u komponente Register.jsx i Login.jsx importujemo komponentu Link
