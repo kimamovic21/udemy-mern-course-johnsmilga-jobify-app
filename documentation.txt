@@ -33,3 +33,7 @@ Section 02: VS Code
 
 11. Obtain Assets
 -u folder assets dodani folderi css, images, wrappers i README.md fajl
+
+12. Global CSS
+-u index.css fajl dodan CSS stil potreban za projekt
+-u folderu assets izbrisemo README.md fajl
