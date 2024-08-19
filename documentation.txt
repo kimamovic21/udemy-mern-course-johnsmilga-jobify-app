@@ -66,3 +66,9 @@ Section 02: VS Code
 
 19. Link Component
 -u komponente Register.jsx i Login.jsx importujemo komponentu Link
+
+20. Nested Routes
+-u komponenti App.jsx, dodajemo niz children
+-u niz children dodajemo vise objekata sa rutama
+-dodajemo rutu index
+-u komponentu HomeLayout.jsx importujemo komponentu Outlet
