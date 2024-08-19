@@ -89,3 +89,8 @@ Section 04: Landing Page
 23. Wrapper
 -u komponenti Landing.jsx kreiramo stiliziranu varijablu komponentu const Wrapper
 -u funkciji Landing(), u jsx-u dodajemo komponentu Wrapper sa otvorenim i zatvorenim tagom
+
+24. Landing Page
+-u komponentu Landing dodajemo slike iz foldera images
+-kreiramo stilizirano varijablu komponentu const StyledWrapper
+-u funkciju Landing() dodajemo komponentu StyledWrapper sa otvorenim i zatvorenim tagom
