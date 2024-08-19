@@ -11,18 +11,22 @@ Section 01: Introduction
 
 Section 02: VS Code
 
-06: VS Code
+06. VS Code
 -instaliranje VS Code ekstenzija
 
-07: VITE - Info
+07. VITE - Info
 -otvorimo web stranicu https://vitejs.dev/guide/
 
-08: VITE - Install
+08. VITE - Install
 -u terminalu provjerimo trenutnu verziju npm-a sa komandom npm --version (8.12.1)
 -u terminalu provjerimo trenutnu verziju node-a sa komandom node --version (21.6.2)
 -u terminalu instaliramo VITE React.js aplikaciju sa komandom npm create vite@latest client
 -odaberemo opciju biblioteku React i opciju Vanilla Javascript
 
-09: VITE - Folder Structure
+09. VITE - Folder Structure
 -u terminalu navigiramo u folder client sa komandom cd client 
 -u folderu client instaliramo pakete sa komandom npm i
+
+10. Remove Boilerplate
+-obrisan App.css fajl
+-manje izmjene u fajlovima index.css i documentation.txt
