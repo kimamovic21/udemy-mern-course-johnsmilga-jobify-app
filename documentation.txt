@@ -72,3 +72,9 @@ Section 02: VS Code
 -u niz children dodajemo vise objekata sa rutama
 -dodajemo rutu index
 -u komponentu HomeLayout.jsx importujemo komponentu Outlet
+
+21. Error Page
+-u komponentu App.jsx importujemo komponentu Error.jsx
+-dodajemo opciju errorElement i vrijednost komponentu Error
+-u komponentu Error.jsx importujemo komponentu Link i funkciju useRouteError
+-vrijednost funkcije useRouteError() pohranjujemo u varijablu const error
