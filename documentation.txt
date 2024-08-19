@@ -85,3 +85,7 @@ Section 04: Landing Page
 22. Styled Components - Intro
 -u komponentu Landing.jsx importujemo instancu styled iz paketa Styled Components
 -kreiramo varijablu const StyledBtn
+
+23. Wrapper
+-u komponenti Landing.jsx kreiramo stiliziranu varijablu komponentu const Wrapper
+-u funkciji Landing(), u jsx-u dodajemo komponentu Wrapper sa otvorenim i zatvorenim tagom

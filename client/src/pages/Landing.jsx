@@ -2,16 +2,22 @@ import styled from 'styled-components';
 
 const Landing = () => {
   return (
-    <div>
-      <h1>Landing</h1>
-      <StyledButton>Click Me</StyledButton>
-    </div>
+    <Wrapper>
+      <h2>Landing</h2>
+      <div className='content'>some content</div>
+    </Wrapper>
   );
 };
 
-const StyledButton = styled.button`
+const Wrapper = styled.div`
   background-color: red;
-  color: white;
+  h1 {
+    color: white;
+  }
+  .content {
+    background-color: blue;
+    color: yellow;
+  }
 `;
 
 export default Landing;
