@@ -78,3 +78,10 @@ Section 02: VS Code
 -dodajemo opciju errorElement i vrijednost komponentu Error
 -u komponentu Error.jsx importujemo komponentu Link i funkciju useRouteError
 -vrijednost funkcije useRouteError() pohranjujemo u varijablu const error
+
+
+Section 04: Landing Page
+
+22. Styled Components - Intro
+-u komponentu Landing.jsx importujemo instancu styled iz paketa Styled Components
+-kreiramo varijablu const StyledBtn

@@ -1,7 +1,17 @@
+import styled from 'styled-components';
+
 const Landing = () => {
   return (
-    <h2>Landing</h2>
-  )
-}
+    <div>
+      <h1>Landing</h1>
+      <StyledButton>Click Me</StyledButton>
+    </div>
+  );
+};
 
-export default Landing
+const StyledButton = styled.button`
+  background-color: red;
+  color: white;
+`;
+
+export default Landing;
