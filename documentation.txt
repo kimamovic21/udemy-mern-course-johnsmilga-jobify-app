@@ -41,3 +41,8 @@ Section 02: VS Code
 13. Title and Favicon
 -u folder public dodajemo sliku favicon.ico
 -u index.html fajl dodajemo sliku favicon.ico
+
+14. Install All Libraries (Optional)
+-u terminalu instaliramo potrebne pakete za projekt
+
+15. React Router - Info
