@@ -46,3 +46,10 @@ Section 02: VS Code
 -u terminalu instaliramo potrebne pakete za projekt
 
 15. React Router - Info
+
+16. React Router - Initial Setup
+-u komponentu App.jsx dodajemo logiku za React Router Dom
+-u komponentu App.jsx importujemo funkciju createBrowserRouter i komponentu RouterProvider
+-kreiramo varijablu const router
+-komponenti RouterProvider dodajemo prop router 
+-u prop router proslijedujemo vrijednost varijable router
