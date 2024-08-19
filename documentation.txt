@@ -1,0 +1,9 @@
+Mern Jobify App
+
+Section 01: Introduction
+
+01. Course Resources
+02. Course Requirements
+03. Free Resources
+04. Video Blur Fixed
+05. Course Review
