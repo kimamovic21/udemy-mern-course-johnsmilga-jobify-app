@@ -30,3 +30,6 @@ Section 02: VS Code
 10. Remove Boilerplate
 -obrisan App.css fajl
 -manje izmjene u fajlovima index.css i documentation.txt
+
+11. Obtain Assets
+-u folder assets dodani folderi css, images, wrappers i README.md fajl
