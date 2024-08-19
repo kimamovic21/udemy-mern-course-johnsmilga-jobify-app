@@ -7,3 +7,9 @@ Section 01: Introduction
 03. Free Resources
 04. Video Blur Fixed
 05. Course Review
+
+
+Section 02: VS Code
+
+06: VS Code
+-instaliranje VS Code ekstenzija

@@ -1,6 +1,9 @@
 # Udemy MERN Course John Smilga - Jobify App
 
 
+## Original Code Source: https://github.com/john-smilga/mern-jobify-v2
+
+
 #### Complete App
 
 [Jobify](https://jobify.live/)
