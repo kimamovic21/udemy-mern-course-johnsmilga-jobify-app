@@ -146,3 +146,6 @@ Section 07: LoginPage
 -importujemo komponentu FormRow i sliku Logo
 -u jsx-u dodajemo komponente FormRow
 -komponentama FormRow dodajemo vrijednosti za prop
+
+33. Login and Register CSS (Optional)
+-u RegisterAndLoginPage.js fajlu dodan CSS stil za stiliziranu komponentu Wrapper koja se koristi u komponentama Register.jsx i Login.jsx
