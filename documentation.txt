@@ -127,3 +127,13 @@ Section 06: Register Page
 -importujemo sliku Logo
 -u jsx-u kreiramo HTML elemente za registraciju
 -input elementu dodajemo atribute type, id, name, className, defaultValue, required
+
+31. FormRow Component
+-u eslint.config.js fajlu dodajemo opciju 'react/prop-types': 'off'
+-u folderu components kreiramo komponentu FormRow.jsx
+-u komponenti FormRow.jsx, funkciji FormRow() dodajemo parametre destruktuirane props type, name, labelText, defaultValue = ''
+-u jsx-u, atributima elementa input proslijedujemo vrijednost za prop
+-u komponentu Register.jsx importujemo komponentu FormRow.jsx
+-u jsx-u kreiramo vise komponenti FormRow za svako input polje
+-svakoj komponenti FormRow dodajemo prop sa podacima
+-u components/index.js fajlu eksportujemo komponentu FormRow
