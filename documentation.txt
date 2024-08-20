@@ -112,3 +112,6 @@ Section 04: Landing Page
 28. Error Page - JSX
 -u komponentu Error.jsx importujemo sliku i komponentu Wrapper
 -dodajemo uslov if (error.status === 404)
+
+29. Error Page - CSS (Optional)
+-u ErrorPage.js fajlu dodajemo varijabli komponenti Wrapper CSS stil
