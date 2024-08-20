@@ -199,3 +199,13 @@ Section 08: Dashboard Page
 -u links.jsx fajl importujemo React ikonice
 -krei variable niz const links
 -u nizu links kreiramo objekte koji sadrze informacije o putanji rute, ime i ikonicu koju sadrze
+
+42. Sidebar Structure
+-u komponentu SmallSidebar.jsx importujemo i kreiramo funkcije  useDashboardContext()
+-importujemo sliku Logo
+-importujemo niz links
+-u jsx-u nizu links dodajemo metodu map()
+-importujemo komponentu NavLink iz paketa React Router Dom
+-u metodi map anonimnoj funkciji dodajemo parametar link
+-u metodi map() dodajemo komponentu NavLink koji sadrze prop to, key i className
+-iz varijable link destruktuiramo varijable const { text, path, icon }
