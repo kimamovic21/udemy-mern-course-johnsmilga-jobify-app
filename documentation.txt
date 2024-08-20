@@ -193,3 +193,9 @@ Section 08: Dashboard Page
 
 40. Navbar CSS (Optional)
 -u wrappers/Navbar.js fajlu dodajemo klasama CSS stil 
+
+41. Links Data
+-u folderu src kreiramo folder utils i links.jsx fajl
+-u links.jsx fajl importujemo React ikonice
+-krei variable niz const links
+-u nizu links kreiramo objekte koji sadrze informacije o putanji rute, ime i ikonicu koju sadrze
