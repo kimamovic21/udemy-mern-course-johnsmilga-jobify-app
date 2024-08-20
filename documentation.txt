@@ -167,3 +167,17 @@ Section 08: Dashboard Page
 
 36. Dashboard CSS (optional)
 -u folderu wrappers, u Dashboard.js fajlu klasama dodajemo CSS stil
+
+37. Dashboard Context
+-u komponenti DashboardLayout.jsx kreiramo varijablu const user
+-kreiramo state varijablu showSidebar i set funkciju setShowSidebar
+-kreiramo state varijablu isDarkTheme i set funkciju setIsDarkTheme
+-kreiramo funkcije toogleDarkTheme(), toggleSidebar(), logoutUser()
+-importujemo funkciju createContext iz paketa React
+-u jsx dodajemo kreiramo komponentu DashboardContext.Provider sa otvorenim i zatvorenim tagom
+-komponenti DashboardContext.Provider dodajemo prop value
+-u prop value proslijedujemo objekt sa kreiranim varijablama koje se trebaju proslijediti
+-importujemo funkciju useContext iz paketa React
+-kreiramo i eksportujemo varijablu const useDashboardContext
+-u komponentu SmallSidebar.jsx importujemo funkciju useDashboardContext()
+-kreiramo varijablu const data
