@@ -137,3 +137,12 @@ Section 06: Register Page
 -u jsx-u kreiramo vise komponenti FormRow za svako input polje
 -svakoj komponenti FormRow dodajemo prop sa podacima
 -u components/index.js fajlu eksportujemo komponentu FormRow
+
+
+Section 07: LoginPage
+
+32. LoginPage
+-u komponentu Login.jsx importujemo stilizirano komponentu Wrapper iz RegisterAndLoginPage.js fajla
+-importujemo komponentu FormRow i sliku Logo
+-u jsx-u dodajemo komponente FormRow
+-komponentama FormRow dodajemo vrijednosti za prop
