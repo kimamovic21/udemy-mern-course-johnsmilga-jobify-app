@@ -105,3 +105,6 @@ Section 04: Landing Page
 -u index.js fajlu eksportujemo komponentu Logo
 -u komponentu Landing.jsx dodajemo komponentu Logo.
 -u jsx-u, u nav element dodajemo komponentu Logo 
+
+27. Logo and Images
+-otvorimo web stranicu https://undraw.co/ za pretrazivanje potrebnog Logo-a
