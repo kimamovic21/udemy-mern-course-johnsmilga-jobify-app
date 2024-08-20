@@ -190,3 +190,6 @@ Section 08: Dashboard Page
 -u komponentu Navbar.jsx importujemo ikonicu FaAlignLeft 
 -importujemo i kreiramo funkciju useDashboardContext
 -iz vrijednosti funkcije useDashboardContext() destruktuiramo funkciju toggleSidebar
+
+40. Navbar CSS (Optional)
+-u wrappers/Navbar.js fajlu dodajemo klasama CSS stil 
