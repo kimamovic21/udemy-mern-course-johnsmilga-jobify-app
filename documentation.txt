@@ -97,3 +97,11 @@ Section 04: Landing Page
 
 25. Landing Page - CSS (Optional)
 -u komponenti LandingPage.jsx komponenti Wrapper klasama dodajemo CSS stil
+
+26. Logo Component
+-u folderu src kreiramo folder components
+-u folderu components kreiramo komponentu Logo.jsx
+-u folderu component kreiramo index.js fajl
+-u index.js fajlu eksportujemo komponentu Logo
+-u komponentu Landing.jsx dodajemo komponentu Logo.
+-u jsx-u, u nav element dodajemo komponentu Logo 
