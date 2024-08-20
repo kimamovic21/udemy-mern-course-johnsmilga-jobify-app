@@ -149,3 +149,12 @@ Section 07: LoginPage
 
 33. Login and Register CSS (Optional)
 -u RegisterAndLoginPage.js fajlu dodan CSS stil za stiliziranu komponentu Wrapper koja se koristi u komponentama Register.jsx i Login.jsx
+
+
+Section 08: Dashboard Page
+
+34. Dashboard Setup
+-u komponentu App.jsx importujemo nove komponente
+-u objekt ruti za rutu dashboard kreiramo novi niz children
+-u nizu children kreiramo nove objekte za rute
+-u komponentu DashboardLayout.jsx importujemo komponentu Outlet
