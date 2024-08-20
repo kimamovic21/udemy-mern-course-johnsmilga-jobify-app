@@ -108,3 +108,7 @@ Section 04: Landing Page
 
 27. Logo and Images
 -otvorimo web stranicu https://undraw.co/ za pretrazivanje potrebnog Logo-a
+
+28. Error Page - JSX
+-u komponentu Error.jsx importujemo sliku i komponentu Wrapper
+-dodajemo uslov if (error.status === 404)
