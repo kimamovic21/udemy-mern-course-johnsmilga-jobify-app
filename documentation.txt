@@ -158,3 +158,9 @@ Section 08: Dashboard Page
 -u objekt ruti za rutu dashboard kreiramo novi niz children
 -u nizu children kreiramo nove objekte za rute
 -u komponentu DashboardLayout.jsx importujemo komponentu Outlet
+
+35. Dashboard Structure
+-u folderu components kreiramo tri nove komponente BigSidebar.jsx, SmallSidebar.jsx i Navbar.jsx
+-u svaku komponentu importujemo odgovarajucu stiliziranu komponentu Wrapper
+-u index.js fajlu eksportujemo kreirane rute
+-u komponenetu DashboardLayout.jsx importujemo kreirane komponente
