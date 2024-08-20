@@ -109,9 +109,21 @@ Section 04: Landing Page
 27. Logo and Images
 -otvorimo web stranicu https://undraw.co/ za pretrazivanje potrebnog Logo-a
 
+
+Section 05: Error Page
+
 28. Error Page - JSX
 -u komponentu Error.jsx importujemo sliku i komponentu Wrapper
 -dodajemo uslov if (error.status === 404)
 
 29. Error Page - CSS (Optional)
 -u ErrorPage.js fajlu dodajemo varijabli komponenti Wrapper CSS stil
+
+
+Section 06: Register Page
+
+30. Register Page - Setup
+-u komponentu Register importujemo stiliziranu komponentu Wrapper iz RegisterAndLoginPage.js fajla
+-importujemo sliku Logo
+-u jsx-u kreiramo HTML elemente za registraciju
+-input elementu dodajemo atribute type, id, name, className, defaultValue, required
