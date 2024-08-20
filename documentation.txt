@@ -164,3 +164,6 @@ Section 08: Dashboard Page
 -u svaku komponentu importujemo odgovarajucu stiliziranu komponentu Wrapper
 -u index.js fajlu eksportujemo kreirane rute
 -u komponenetu DashboardLayout.jsx importujemo kreirane komponente
+
+36. Dashboard CSS (optional)
+-u folderu wrappers, u Dashboard.js fajlu klasama dodajemo CSS stil
