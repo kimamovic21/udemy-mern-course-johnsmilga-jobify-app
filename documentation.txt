@@ -181,3 +181,7 @@ Section 08: Dashboard Page
 -kreiramo i eksportujemo varijablu const useDashboardContext
 -u komponentu SmallSidebar.jsx importujemo funkciju useDashboardContext()
 -kreiramo varijablu const data
+
+38. React Icons
+-otvorimo web stranicu https://react-icons.github.io/react-icons/ da odaberemo potrebnu ikonicu
+-u komponentu Navbar.jsx importujemo ikonicu FaHome
