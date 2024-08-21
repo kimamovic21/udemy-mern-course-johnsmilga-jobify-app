@@ -252,3 +252,6 @@ Section 08: Dashboard Page
 -u komponentu Navbar.jsx importujemo komponentu LogoutContainer.jsx
 -button elementu dodajemo dogadaj onClick
 -u dogadaj onClick proslijedujemo funkciju logoutUser
+
+49. Logout Container CSS (optional)
+-u wrappers/LogoutContainer.js fajlu dodajemo CSS stil za klase
