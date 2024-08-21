@@ -266,3 +266,6 @@ Section 08: Dashboard Page
 -u prop onClick proslijedujemo funkciju toggleDarkTheme
 -u jsx-u dodajemo ternani uslov za isDarkTheme za pojavljivanje React ikonica
 -u komponentu Navbar.jsx importujemo komponentu ThemeToggle.jsx
+
+51. Theme Toggle CSS (optional)
+-u wrappers/ThemeToggle.js fajlu dodajemo CSS stil za klase
