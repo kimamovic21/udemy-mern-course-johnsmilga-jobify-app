@@ -1,10 +1,9 @@
-import { NavLink } from 'react-router-dom'
 import { useDashboardContext } from '../pages/DashboardLayout'
 import { FaTimes } from 'react-icons/fa'
 
-import links from '../utils/links'
 import Logo from './Logo'
 import Wrapper from '../assets/wrappers/SmallSidebar'
+import NavLinks from './NavLinks'
 
 const SmallSidebar = () => {
   const { showSidebar, toggleSidebar } = useDashboardContext()
@@ -19,24 +18,7 @@ const SmallSidebar = () => {
           <header>
             <Logo />
           </header>
-          <div className='nav-links'>
-            {links.map((link) => {
-              const { text, path, icon } = link;
-
-              return (
-                <NavLink
-                  key={text}
-                  to={path}
-                  className='nav-link'
-                  onClick={toggleSidebar}
-                  end
-                >
-                  <span className='icon'>{icon}</span>
-                  {text}
-                </NavLink>
-              );
-            })}
-          </div>
+          <NavLinks />
         </div>
       </div>
     </Wrapper>

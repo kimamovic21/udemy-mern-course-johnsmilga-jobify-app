@@ -219,3 +219,10 @@ Section 08: Dashboard Page
 
 44. Sidebar CSS (optional)
 -u wrappers/SmallSidebar.js fajlu dodan CSS stil za Sidebar
+
+45. NavLinks Component
+-u folderu components kreiramo komponentu NavLinks.jsx
+-u komponentu NavLinks.jsx importujemo i kreiramo funkciju useDashboardContext()
+-iz funkcije useDashboardContext() destruktuiramo varijable const { user, toggleSidebar }
+-importujemo komponentu NavLink iz paketa React Router Dom
+-u komponentu SmallSidebar.jsx importujemo komponentu NavLinks.jsx
