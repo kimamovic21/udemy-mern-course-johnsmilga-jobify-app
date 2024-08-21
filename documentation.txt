@@ -216,3 +216,6 @@ Section 08: Dashboard Page
 -u jsx-u komponenti NavLink dodajemo prop onClick
 -u prop onClick proslijedujemo funkciju toggleSidebar
 -komponenti NavLink dodajemo prop end
+
+44. Sidebar CSS (optional)
+-u wrappers/SmallSidebar.js fajlu dodan CSS stil za Sidebar
