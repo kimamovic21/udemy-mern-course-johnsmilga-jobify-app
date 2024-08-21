@@ -197,7 +197,7 @@ Section 08: Dashboard Page
 41. Links Data
 -u folderu src kreiramo folder utils i links.jsx fajl
 -u links.jsx fajl importujemo React ikonice
--krei variable niz const links
+-kreiramo varijablu niz const links
 -u nizu links kreiramo objekte koji sadrze informacije o putanji rute, ime i ikonicu koju sadrze
 
 42. Sidebar Structure
@@ -211,7 +211,7 @@ Section 08: Dashboard Page
 -iz varijable link destruktuiramo varijable const { text, path, icon }
 
 43. Sidebar Functionality
--u komponenti SmallSidebar.jsx destruktuiramo variable showSidebar, toggleSidebar iz funkcije useDashboardContext()
+-u komponenti SmallSidebar.jsx destruktuiramo varijable showSidebar, toggleSidebar iz funkcije useDashboardContext()
 -div elementu dodajemo dinamicku klasu za prikazivanje elementa Sidebar na malom ekranu
 -u jsx-u komponenti NavLink dodajemo prop onClick
 -u prop onClick proslijedujemo funkciju toggleSidebar
@@ -238,3 +238,17 @@ Section 08: Dashboard Page
 
 47. Big Sidebar CSS (Optional)
 -u wrappers/BigSidebar.js fajlu dodajemo CSS stil za klase
+
+48. Logout Container
+-u folderu components kreiramo komponentu LogoutContainer.jsx
+-u komponentu LogoutContainer.jsx importujemo i kreiramo funkciju useState()
+-importujemo i kreiramo funkciju useDashboardContext()
+-kreiramo state varijablu const showLogout i set funkciju setShowLogout
+-iz funkcije useDashboardContext() destruktuiramo varijablu user i funkciju logoutUser
+-importujemo stiliziranu komponentu Wrapper iz wrappers/LogoutContainer.js fajla
+-u jsx-u button elementu dodajemo dogadaj onClick
+-u jsx-u dodajemo uslov ternarni operator user.avatar
+-div elementu dodajemo klasu ternarni operator showLogout
+-u komponentu Navbar.jsx importujemo komponentu LogoutContainer.jsx
+-button elementu dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju logoutUser
