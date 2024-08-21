@@ -209,3 +209,10 @@ Section 08: Dashboard Page
 -u metodi map anonimnoj funkciji dodajemo parametar link
 -u metodi map() dodajemo komponentu NavLink koji sadrze prop to, key i className
 -iz varijable link destruktuiramo varijable const { text, path, icon }
+
+43. Sidebar Functionality
+-u komponenti SmallSidebar.jsx destruktuiramo variable showSidebar, toggleSidebar iz funkcije useDashboardContext()
+-div elementu dodajemo dinamicku klasu za prikazivanje elementa Sidebar na malom ekranu
+-u jsx-u komponenti NavLink dodajemo prop onClick
+-u prop onClick proslijedujemo funkciju toggleSidebar
+-komponenti NavLink dodajemo prop end
