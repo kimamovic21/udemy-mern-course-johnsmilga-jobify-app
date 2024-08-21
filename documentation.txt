@@ -226,3 +226,12 @@ Section 08: Dashboard Page
 -iz funkcije useDashboardContext() destruktuiramo varijable const { user, toggleSidebar }
 -importujemo komponentu NavLink iz paketa React Router Dom
 -u komponentu SmallSidebar.jsx importujemo komponentu NavLinks.jsx
+
+46. Big Sidebar
+-u komponentu BigSidebar.jsx importujemo i kreiramo funkciju useDashboardContext()
+-iz funkcije useDashboardContext() destruktuiramo varijablu const showSidebar 
+-u jsx-u div elementu dodajemo dinamicku klasu showSidebar
+-importujemo komponentu NavLinks.jsx
+-u jsx-u komponenti NavLinks dodajemo prop isBigSidebar
+-u komponenti NavLinks.jsx, funkciji NavLinks() dodajemo parametar destruktuirani prop isBigSidebar
+-u prop onClick dodajemo ternarni uslov isBigSidebar ? null : toggleSidebar
