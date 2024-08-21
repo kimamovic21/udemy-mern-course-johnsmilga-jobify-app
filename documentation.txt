@@ -255,3 +255,14 @@ Section 08: Dashboard Page
 
 49. Logout Container CSS (optional)
 -u wrappers/LogoutContainer.js fajlu dodajemo CSS stil za klase
+
+50. Theme Toggle
+-u folderu components kreiramo komponentu ToggleTheme.jsx 
+-importujemo i kreiramo funkciju useDashboardContext()
+-importujemo React ikonice
+-importujemo stiliziranu komponentu Wrapper iz wrappers/ThemeToggle.js fajla
+-destruktuiramo varijable const { isDarkTheme, toggleDarkTheme }
+-u jsx-u komponenti Wrapper dodajemo prop onClick
+-u prop onClick proslijedujemo funkciju toggleDarkTheme
+-u jsx-u dodajemo ternani uslov za isDarkTheme za pojavljivanje React ikonica
+-u komponentu Navbar.jsx importujemo komponentu ThemeToggle.jsx
