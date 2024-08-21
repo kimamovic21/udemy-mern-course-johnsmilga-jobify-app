@@ -235,3 +235,6 @@ Section 08: Dashboard Page
 -u jsx-u komponenti NavLinks dodajemo prop isBigSidebar
 -u komponenti NavLinks.jsx, funkciji NavLinks() dodajemo parametar destruktuirani prop isBigSidebar
 -u prop onClick dodajemo ternarni uslov isBigSidebar ? null : toggleSidebar
+
+47. Big Sidebar CSS (Optional)
+-u wrappers/BigSidebar.js fajlu dodajemo CSS stil za klase
