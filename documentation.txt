@@ -411,3 +411,6 @@ Section 09: Server
 -dodajemo metodu res.status(404)
 -kreiramo metodu app.use((err, req, res, next) => {...})
 -dodajemo metodu res.status(500)
+
+69. Not Found vs Error Route
+-u server.js fajlu, u funkciji za dohvacanje posla, u uslov if dodajemo objekt throw new Error()

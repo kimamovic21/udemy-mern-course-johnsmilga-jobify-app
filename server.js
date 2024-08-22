@@ -46,9 +46,10 @@ app.post('/api/v1/jobs', (req, res) => {
 // GET SINGLE JOB
 app.get('/api/v1/jobs/:id', (req, res) => {
     const { id } = req.params;
-    console.log(id)
+    console.log(id);
     const job = jobs.find((job) => job.id === id);
     if (!job) {
+        throw new Error('no job with that id');
         return res.status(404).json({ msg: `no job with id ${id}` });
     };
     res.status(200).json({ job });
