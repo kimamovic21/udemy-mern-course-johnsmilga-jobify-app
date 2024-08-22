@@ -284,7 +284,7 @@ Section 08: Dashboard Page
 -u komponenti App.jsx kreiramo funkciju checkDefaultTheme()
 -kreiramo varijablu const isDarkThemeEnabled
 -u objekt ruti za komponentu DashboardLayout dodajemo prop isDarkThemeEnabled
--u prop isDarkThemeEnabled proslijedujemo vrijednost variable isDarkThemeEnabled
+-u prop isDarkThemeEnabled proslijedujemo vrijednost varijable isDarkThemeEnabled
 -u komponenti DashboardLayout.jsx, funkciji DashboardLayout() dodajemo parametar destruktuirani prop isDarkThemeEnabled
 -u funkciju useState() za promjenu teme proslijedujemo varijablu isDarkThemeEnabled
 
@@ -303,3 +303,10 @@ Section 09: Server
 -u root folderu, u terminalu ukucamo komandu npm init -y da generisemo package.json fajl
 -u terminal ukucamo komandu node server
 -u terminalu treba da se prikaze poruka console.log() ako je sve uredu
+
+56. ES6 Modules
+-u package.json fajl dodajemo opciju "type": "module"
+-kreiramo dva fajla test-named.js i test-default.js
+-u tim fajlovima kreiramo i eksportujemo varijable
+-u server.js fajl importujemo kreirane variable
+-u terminal ukucamo komandu node server da vidimo vrijednost varijabli 
