@@ -405,3 +405,9 @@ Section 09: Server
 -redeklarisemo varijablu jobs sa novom vrijednosti iz varijable newJobs
 -dodajemo metodu res.status(200)
 -u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom DELETE
+
+68. Not Found and Error Route
+-u server.js fajlu kreiramo metod app.use('*')
+-dodajemo metodu res.status(404)
+-kreiramo metodu app.use((err, req, res, next) => {...})
+-dodajemo metodu res.status(500)
