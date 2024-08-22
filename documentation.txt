@@ -323,3 +323,10 @@ Section 09: Server
 -kreiramo metodu app.listen()
 -u package.json fajl dodajemo komandu "dev": "nodemon server.js"
 -u terminal ukucamo komandu npm run dev da pokrenemo Node.js - Express server
+
+59. Thunder Client 
+-otvorimo web stranicu https://www.thunderclient.com/
+-mozemo koristiti i Postman
+-u Postman-u kreiramo novu kolekciju Udemy - MERN Course Jogn Smilga Jobify App
+-kreiramo novi zahtjev Home Route 
+-testiramo rutu http://localhost:5100 sa metodom GET
