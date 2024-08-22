@@ -330,3 +330,8 @@ Section 09: Server
 -u Postman-u kreiramo novu kolekciju Udemy - MERN Course Jogn Smilga Jobify App
 -kreiramo novi zahtjev Home Route 
 -testiramo rutu http://localhost:5100 sa metodom GET
+
+60. JSON Middleware
+-u server.js fajlu kreiramo metodu app.use(express.json())
+-kreiramo metodu app.post()
+-u Postman-u kreiramo novi zahtjev Home Route Post i testiramo rutu http://localhost:5100 sa metodom POST
