@@ -360,3 +360,15 @@ Section 09: Server
 -u Postman testiramo rutu http://localhost:5100/api/v1/jobs sa metodom GET
 -u Postman-u kreiramo folder Job Routes gdje cemo pohranjivati sve rute vezane za poslove
 -u Postman-u u postavkama za Environments kreiramo globalnu varijablu URL
+
+64. Create Job
+-varijabla URL sadrzi link http://localhost:5100/api/v1
+-u server.js fajlu kreiramo metodu app.post('/api/v1/jobs') za kreiranje poslova
+-u funkciji (req, res) destruktuiramo varijable const { company, position }
+-dodajemo uslov if (!company || !position)
+-u uslov if dodajemo metodu res.status(400)
+-kreiramo varijablu const id
+-kreiramo varijablu objekt const job
+-dodajemo metodu jobs.push(job)
+-dodajemo metodu res.status(200)
+-u Postman-u kreiramo rutu {{URL}}/jobs sa metodom POST
