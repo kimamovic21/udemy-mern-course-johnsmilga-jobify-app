@@ -1,7 +1,10 @@
-console.log('Server is working...');
+import express from 'express';
+const app = express();
 
-import { value } from './test-named.js';
-import randomValue from './test-default.js';
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
-console.log(value);
-console.log(randomValue);
+app.listen(5100, () => {
+  console.log('server running....');
+});

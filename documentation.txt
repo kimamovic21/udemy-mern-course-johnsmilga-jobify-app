@@ -315,3 +315,11 @@ Section 09: Server
 -u terminalu instaliramo potrebne pakate za server dio projekta
 -u package.json fajlu u objektu scripts dodajemo komandu "setup-project": "npm i && cd client && npm i"
 -u terminal ukucamo komandu npm run setup-project sa kojom u istom vrijeme instaliramo pakete za client i server dio
+
+58. Express and Nodemon
+-u server.js fajl importujemo instancu express
+-kreiramo varijablu const app
+-kreiramo metodu app.get()
+-kreiramo metodu app.listen()
+-u package.json fajl dodajemo komandu "dev": "nodemon server.js"
+-u terminal ukucamo komandu npm run dev da pokrenemo Node.js - Express server
