@@ -371,4 +371,13 @@ Section 09: Server
 -kreiramo varijablu objekt const job
 -dodajemo metodu jobs.push(job)
 -dodajemo metodu res.status(200)
--u Postman-u kreiramo rutu {{URL}}/jobs sa metodom POST
+-u Postman-u testiramo rutu {{URL}}/jobs sa metodom POST
+
+65. Get Single Job
+-u server.js fajlu kreiramo metodu app.get('/api/v1/jobs/:id')
+-u funkciji (req, res) destruktuiramo varijablu const { id } 
+-kreiramo varijablu const job
+-dodajemo uslov if (!job)
+-u uslov if dodajemo return res.status(404)
+-dodajemo metodu res.status(200)
+-u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom GET
