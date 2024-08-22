@@ -269,3 +269,21 @@ Section 08: Dashboard Page
 
 51. Theme Toggle CSS (optional)
 -u wrappers/ThemeToggle.js fajlu dodajemo CSS stil za klase
+
+52. Dark Theme Logic
+-u komponenti DashboardLayout.jsx dodajemo logiku u funkciju toggleDarkTheme()
+-u funkciji toggleDarkTheme() kreiramo varijablu const newDarkTheme = !isDarkTheme
+-dodajemo set funkciju setIsDarkTheme(newDarkTheme)
+-dodajemo metodu document.body.classList.toggle()
+-dodajemo metodu localStorage.setItem()
+-kreiramo funkciju checkDefaultTheme()
+-u funkciji checkDefaultTheme() kreiramo varijablu cpmst isDarkTheme
+-dodajemo metodu document.body.classList.toggle()
+-dodajemo return isDarkTheme
+-u funkciju useState() za promjenu teme proslijedujemo funkciju checkDefaultTheme()
+-u komponenti App.jsx kreiramo funkciju checkDefaultTheme()
+-kreiramo varijablu const isDarkThemeEnabled
+-u objekt ruti za komponentu DashboardLayout dodajemo prop isDarkThemeEnabled
+-u prop isDarkThemeEnabled proslijedujemo vrijednost variable isDarkThemeEnabled
+-u komponenti DashboardLayout.jsx, funkciji DashboardLayout() dodajemo parametar destruktuirani prop isDarkThemeEnabled
+-u funkciju useState() za promjenu teme proslijedujemo varijablu isDarkThemeEnabled
