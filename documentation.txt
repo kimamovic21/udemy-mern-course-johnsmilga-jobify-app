@@ -295,3 +295,11 @@ Section 08: Dashboard Page
 
 54. Dark Theme CSS (optional)
 -u index.css dodajemo CSS klase za promjenu boje teme 
+
+
+Section 09: Server
+
+55. Folder Structure
+-u root folderu, u terminalu ukucamo komandu npm init -y da generisemo package.json fajl
+-u terminal ukucamo komandu node server
+-u terminalu treba da se prikaze poruka console.log() ako je sve uredu

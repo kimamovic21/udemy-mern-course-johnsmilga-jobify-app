@@ -1,0 +1,23 @@
+{
+  "name": "udemy-mern-course-johnsmilga-jobify-app",
+  "version": "1.0.0",
+  "description": "[Jobify](https://jobify.live/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimamovic21/udemy-mern-course-johnsmilga-jobify-app.git"
+  },
+  "keywords": [],
+  "author": "Kerim Imamovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimamovic21/udemy-mern-course-johnsmilga-jobify-app/issues"
+  },
+  "homepage": "https://github.com/kimamovic21/udemy-mern-course-johnsmilga-jobify-app#readme",
+  "dependencies": {
+    "udemy-mern-course-johnsmilga-jobify-app": "file:"
+  }
+}
