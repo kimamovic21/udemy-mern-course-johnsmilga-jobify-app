@@ -292,3 +292,6 @@ Section 08: Dashboard Page
 -u komponenti App.jsx eksportujemo funkciju checkDefaultTheme()
 -u komponentu DashboardLayout.jsx importujemo funkciju checkDefaultTheme()
 -u funkciju useState() proslijedujemo funkciju checkDefaultTheme()
+
+54. Dark Theme CSS (optional)
+-u index.css dodajemo CSS klase za promjenu boje teme 
