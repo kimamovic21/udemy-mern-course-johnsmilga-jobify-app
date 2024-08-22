@@ -394,3 +394,14 @@ Section 09: Server
 -nove izmjenjene podatke pohranjujemo u job.company = company i job.position = position
 -dodajemo metodu res.status(200)
 -u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom PATCH
+
+67. Delete Job
+-u server.js fajlu kreiramo metodu app.delete('/api/v1/jobs/:id')
+-u funkciji (req, res) destruktuiramo varijablu const { id } 
+-kreiramo varijablu const job 
+-dodajemo uslov if (!job)
+-u uslov if (job) dodajemo metodu res.status(404)
+-kreiramo varijablu const newJobs
+-redeklarisemo varijablu jobs sa novom vrijednosti iz varijable newJobs
+-dodajemo metodu res.status(200)
+-u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom DELETE
