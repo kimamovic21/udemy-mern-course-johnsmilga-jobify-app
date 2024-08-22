@@ -310,3 +310,8 @@ Section 09: Server
 -u tim fajlovima kreiramo i eksportujemo varijable
 -u server.js fajl importujemo kreirane variable
 -u terminal ukucamo komandu node server da vidimo vrijednost varijabli 
+
+57. Install Server Packages
+-u terminalu instaliramo potrebne pakate za server dio projekta
+-u package.json fajlu u objektu scripts dodajemo komandu "setup-project": "npm i && cd client && npm i"
+-u terminal ukucamo komandu npm run setup-project sa kojom u istom vrijeme instaliramo pakete za client i server dio
