@@ -308,7 +308,7 @@ Section 09: Server
 -u package.json fajl dodajemo opciju "type": "module"
 -kreiramo dva fajla test-named.js i test-default.js
 -u tim fajlovima kreiramo i eksportujemo varijable
--u server.js fajl importujemo kreirane variable
+-u server.js fajl importujemo kreirane varijable
 -u terminal ukucamo komandu node server da vidimo vrijednost varijabli 
 
 57. Install Server Packages
@@ -335,3 +335,13 @@ Section 09: Server
 -u server.js fajlu kreiramo metodu app.use(express.json())
 -kreiramo metodu app.post()
 -u Postman-u kreiramo novi zahtjev Home Route Post i testiramo rutu http://localhost:5100 sa metodom POST
+
+61. Morgan and Dotenv
+-u server.js fajl importujemo instancu morgan
+-kreiramo metodu app.use(morgan('dev'))
+-kreiramo fajlove .env i env.example
+-u fajlovima .env i env.example kreiramo varijable NODE_ENV i PORT
+-u server.js fajlu importujemo dotenv instancu
+-instanci dotenv dodajemo metodu config()
+-dodajemo uslov if (process.env.NODE_ENV === 'development')
+-kreiramo varijablu const port
