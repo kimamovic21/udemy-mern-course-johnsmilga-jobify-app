@@ -381,3 +381,16 @@ Section 09: Server
 -u uslov if dodajemo return res.status(404)
 -dodajemo metodu res.status(200)
 -u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom GET
+
+66. Edit Job
+-u server.js fajlu kreiramo metodu app.patch('/api/v1/jobs/:id')
+-u funkciji (req, res) destruktuiramo varijable const { company, position } 
+-dodajemo uslov if (!company || !position)
+-u uslov if dodajemo metodu res.status(400)
+-destruktuiramo varijablu const { id }
+-kreiramo varijablu const job
+-dodajemo uslov if (!job)
+-u uslov if (!job) dodajemo metodu res.status(404)
+-nove izmjenjene podatke pohranjujemo u job.company = company i job.position = position
+-dodajemo metodu res.status(200)
+-u Postman-u testiramo rutu {{URL}}/jobs/:id sa metodom PATCH
