@@ -345,3 +345,10 @@ Section 09: Server
 -instanci dotenv dodajemo metodu config()
 -dodajemo uslov if (process.env.NODE_ENV === 'development')
 -kreiramo varijablu const port
+
+62. New Node Features (optional)
+-u server.js fajlu kreiramo metodu fetch()
+-kreiramo funkciju getData()
+-kreiramo metode try - catch
+-u package.json fajlu u objektu scripts dodajemo komandu "watch": "node --watch server.js"
+-u terminal ukucamo komandu npm run watch da pokrenemo server
