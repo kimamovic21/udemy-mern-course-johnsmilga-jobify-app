@@ -287,3 +287,8 @@ Section 08: Dashboard Page
 -u prop isDarkThemeEnabled proslijedujemo vrijednost variable isDarkThemeEnabled
 -u komponenti DashboardLayout.jsx, funkciji DashboardLayout() dodajemo parametar destruktuirani prop isDarkThemeEnabled
 -u funkciju useState() za promjenu teme proslijedujemo varijablu isDarkThemeEnabled
+
+53. Dark Theme Logic - Bug Fix
+-u komponenti App.jsx eksportujemo funkciju checkDefaultTheme()
+-u komponentu DashboardLayout.jsx importujemo funkciju checkDefaultTheme()
+-u funkciju useState() proslijedujemo funkciju checkDefaultTheme()
