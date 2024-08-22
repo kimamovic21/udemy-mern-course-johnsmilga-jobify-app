@@ -352,3 +352,11 @@ Section 09: Server
 -kreiramo metode try - catch
 -u package.json fajlu u objektu scripts dodajemo komandu "watch": "node --watch server.js"
 -u terminal ukucamo komandu npm run watch da pokrenemo server
+
+63. Get All Jobs
+-importujemo funkciju nanoid iz paketa nanoid
+-kreiramo varijablu niz let jobs
+-kreiramo metodu app.get('/api/v1/jobs')
+-u Postman testiramo rutu http://localhost:5100/api/v1/jobs sa metodom GET
+-u Postman-u kreiramo folder Job Routes gdje cemo pohranjivati sve rute vezane za poslove
+-u Postman-u u postavkama za Environments kreiramo globalnu varijablu URL
