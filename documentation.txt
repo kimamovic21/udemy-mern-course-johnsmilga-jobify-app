@@ -463,3 +463,7 @@ Section 09: Server
 -u jobController.js fajl importujemo model Job 
 -u asinhronu funkciju createJob() dodajemo metodu await Job.create()
 -u Postman-u testiramo rutu za kreiranje posla
+
+77. Async Errors
+-u jobController.js fajlu, u metodi Job.create() dodajemo string da testiramo gresku prilikom slanja podataka u bazu
+-importujemo paket Express Async Errors
