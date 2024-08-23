@@ -442,3 +442,11 @@ Section 09: Server
 
 73. Mongoose
 -otvorimo web stranicu https://mongoosejs.com/
+
+74. Connect DB
+-u server.js fajl importujemo instancu mongoose
+-kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu mongoose.connect()
+-dodajemo metodu app.listen()
+-u blok koda catch dodajemo console.error(error)
+-dodajemo metodu process.exit(1)
