@@ -439,3 +439,6 @@ Section 09: Server
 -kreiramo bazu podatataka na MongoDB Atlas-u
 -kreiramo novi Connection string
 -u fajlovima .env i .env.example kreiramo varijablu MONGO_URL
+
+73. Mongoose
+-otvorimo web stranicu https://mongoosejs.com/
