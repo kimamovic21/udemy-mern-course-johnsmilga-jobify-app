@@ -467,3 +467,10 @@ Section 09: Server
 77. Async Errors
 -u jobController.js fajlu, u metodi Job.create() dodajemo string da testiramo gresku prilikom slanja podataka u bazu
 -importujemo paket Express Async Errors
+
+78. Get All Jobs and Get Single Job
+-u jobController.js fajlu, u funkciji getAllJobs() dodajemo metodu Job.find()
+-u funkciju za kreiranje poslova dodajemo Job.create(req.body)
+-u Postman-u kreiramo vise poslova 
+-u funkciju getJob() dodajemo metodu await Job.findById(id)
+-u Postman-u testiramo rutu za pretrazivanje poslova i posla po id-u
