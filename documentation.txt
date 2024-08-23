@@ -414,3 +414,19 @@ Section 09: Server
 
 69. Not Found vs Error Route
 -u server.js fajlu, u funkciji za dohvacanje posla, u uslov if dodajemo objekt throw new Error()
+
+70. Controller and Router
+-kreiramo folder controllers
+-u folderu controllers kreiramo jobController.js fajl
+-u jobController.js fajl premjestamo CRUD funkcije za poslove iz server.js fajla
+-anonimnim funkcijama (req, res) dodjeljujemo imena 
+-eksportujemo kreirane funkcije
+-kreiramo folder routes
+-u folderu routes kreiramo jobRouter.js fajl
+-u jobRouter.js fajl importujemo CRUD funkcije za poslove iz jobController.js fajla
+-importujemo funkciju Router iz Express paketa
+-vrijednost funkcije Router() pohranjujemo u varijablu const router
+-kreiramo metode router.route()
+-varijablu router eksportujemo kao default
+-u server.js fajlu importujemo varijablu jobRouter iz jobRouter.js fajla
+-kreiramo metodu app.use('/api/v1/jobs', jobRouter)
