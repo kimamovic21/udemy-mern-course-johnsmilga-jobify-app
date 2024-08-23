@@ -479,3 +479,6 @@ Section 09: Server
 -u funkciju deleteJob() dodajemo metoda await Job.findByIdAndDelete(id)
 -u funkciju editJob() dodajemo metodu await Job.findByIdAndUpdate()
 -u Postman-u testiramo rute za izmjenu i brisanje posla
+
+80. Status Codes
+-u jobController.js fajl importujemo objekt StatusCodes iz paketa HTTP Status Codes
