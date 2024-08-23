@@ -458,3 +458,8 @@ Section 09: Server
 -kreiramo varijablu const JobSchema
 -u funkciju Schema() dodajemo konfiguracione objekte
 -eksportujemo mongoose.model() kao default
+
+76. Create Job Controller
+-u jobController.js fajl importujemo model Job 
+-u asinhronu funkciju createJob() dodajemo metodu await Job.create()
+-u Postman-u testiramo rutu za kreiranje posla
