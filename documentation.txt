@@ -430,3 +430,5 @@ Section 09: Server
 -varijablu router eksportujemo kao default
 -u server.js fajlu importujemo varijablu jobRouter iz jobRouter.js fajla
 -kreiramo metodu app.use('/api/v1/jobs', jobRouter)
+
+71. MongoDB
