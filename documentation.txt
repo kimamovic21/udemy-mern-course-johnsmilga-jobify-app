@@ -474,3 +474,8 @@ Section 09: Server
 -u Postman-u kreiramo vise poslova 
 -u funkciju getJob() dodajemo metodu await Job.findById(id)
 -u Postman-u testiramo rutu za pretrazivanje poslova i posla po id-u
+
+79. Delete and Update Job
+-u funkciju deleteJob() dodajemo metoda await Job.findByIdAndDelete(id)
+-u funkciju editJob() dodajemo metodu await Job.findByIdAndUpdate()
+-u Postman-u testiramo rute za izmjenu i brisanje posla
