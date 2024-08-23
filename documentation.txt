@@ -450,3 +450,11 @@ Section 09: Server
 -dodajemo metodu app.listen()
 -u blok koda catch dodajemo console.error(error)
 -dodajemo metodu process.exit(1)
+
+75. Job Model
+-kreiramo folder models
+-u folderu models kreiramo JobModel.js fajl
+-u JobModel.js fajl importujemo instancu mongoose
+-kreiramo varijablu const JobSchema
+-u funkciju Schema() dodajemo konfiguracione objekte
+-eksportujemo mongoose.model() kao default
