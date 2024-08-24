@@ -500,3 +500,6 @@ Section 09: Server
 -u server.js fajl importujemo funkciju errorHandlerMiddleware
 -kreiramo metodu app.use(errorHandlerMiddleware)
 -u jobController.js fajlu, u funkcije updateJob() i deleteJob() dodajemo funkciju NotFoundError()
+
+82. More Custom Errors
+-u customErrors.js fajlu kreiramo klase BadRequestError, UnauthenticatedError i UnauthorizedError
