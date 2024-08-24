@@ -505,3 +505,15 @@ Section 09: Server
 -u customErrors.js fajlu kreiramo klase BadRequestError, UnauthenticatedError i UnauthorizedError
 
 83. Validation Layer - Intro
+
+84. Express Validator - Setup
+-u server.js fajlu dodajemo metodu app.post() za rutu '/api/v1/test'
+-importujemo funkcije body i validationResult iz paketa Express Validator
+-u metodu app.post() dodajemo funkcije body i validationResult
+-u metodi app.post() prvi argument je ruta
+-drugi argument je niz za validaciju
+-treci argument je anonimna funkcija (req, res) za validaciju
+-cetrvti argument je anonimna funkcija (req, res)
+-u anonimnoj funkciji (req, res) kreiramo varijablu const errors
+-dodajemo uslov if (!errors.isEmpty())
+-u uslovu if kreiramo varijablu const errorMessages 
