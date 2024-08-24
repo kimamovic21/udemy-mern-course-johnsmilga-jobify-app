@@ -477,8 +477,26 @@ Section 09: Server
 
 79. Delete and Update Job
 -u funkciju deleteJob() dodajemo metoda await Job.findByIdAndDelete(id)
--u funkciju editJob() dodajemo metodu await Job.findByIdAndUpdate()
+-u funkciju updateJob() dodajemo metodu await Job.findByIdAndUpdate()
 -u Postman-u testiramo rute za izmjenu i brisanje posla
 
 80. Status Codes
 -u jobController.js fajl importujemo objekt StatusCodes iz paketa HTTP Status Codes
+
+81. Custom Error
+-kreiramo folder errors
+-u folderu error kreiramo customErrors.js fajl
+-u customErrors.js fajl importujemo objekt StatusCodes
+-eksportujemo klasu classNotFoundError
+-u jobController.js fajl, importujemo klasu NotFoundError
+-u funkciju getJob() dodajemo NotFoundError()
+-kreiramo folder middleware
+-u folderu middleware kreiramo errorHandlerMiddleware.js fajl
+-u errorHandlerMiddleware.js fajlu kreiramo funkciju errorHandlerMiddleware() sa parametrima err, req, res i next
+-u funkciju errorHandlerMiddleware() dodajemo metodu res.status(500)
+-kreiramo varijable const statusCode i const msg
+-dodajemo metodu res.status(statusCode)
+-eksportujemo funkciju kao default
+-u server.js fajl importujemo funkciju errorHandlerMiddleware
+-kreiramo metodu app.use(errorHandlerMiddleware)
+-u jobController.js fajlu, u funkcije updateJob() i deleteJob() dodajemo funkciju NotFoundError()

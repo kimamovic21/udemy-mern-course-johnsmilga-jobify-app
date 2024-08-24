@@ -2007,11 +2007,15 @@ app.use((err, req, res, next) => {
 
 #### Not Found and Error Middleware
 
-The "not found" middleware in Express.js is used when a request is made to a route that does not exist. It catches these requests and responds with a 404 status code, indicating that the requested resource was not found.
+The "not found" middleware in Express.js is used when a request is made to a route that does not exist. 
+It catches these requests and responds with a 404 status code, indicating that the requested resource was not found.
 
-On the other hand, the "error" middleware in Express.js is used to handle any errors that occur during the processing of a request. It is typically used to catch unexpected errors or exceptions that are not explicitly handled in the application code. It logs the error and sends a 500 status code, indicating an internal server error.
+On the other hand, the "error" middleware in Express.js is used to handle any errors that occur during the processing of a request. 
+It is typically used to catch unexpected errors or exceptions that are not explicitly handled in the application code. 
+It logs the error and sends a 500 status code, indicating an internal server error.
 
-In summary, the "not found" middleware is specifically designed to handle requests for non-existent routes, while the "error" middleware is a catch-all for handling unexpected errors that occur during request processing.
+In summary, the "not found" middleware is specifically designed to handle requests for non-existent routes, while the "error" middleware 
+is a catch-all for handling unexpected errors that occur during request processing.
 
 - make a request to "/jobss"
 
@@ -2137,15 +2141,21 @@ app.use('/api/v1/jobs', jobRouter);
 
 [MongoDb](https://www.mongodb.com/)
 
-MongoDB is a popular NoSQL database that provides a flexible and scalable approach to storing and retrieving data. It uses a document-oriented model, where data is organized into collections of JSON-like documents. MongoDB offers high performance, horizontal scalability, and easy integration with modern development frameworks, making it suitable for handling diverse data types and handling large-scale applications.
+MongoDB is a popular NoSQL database that provides a flexible and scalable approach to storing and retrieving data. 
+It uses a document-oriented model, where data is organized into collections of JSON-like documents. 
+MongoDB offers high performance, horizontal scalability, and easy integration with modern development frameworks, 
+making it suitable for handling diverse data types and handling large-scale applications.
 
-MongoDB Atlas is a fully managed cloud database service provided by MongoDB, offering automated deployment, scaling, and monitoring of MongoDB clusters, allowing developers to focus on building their applications without worrying about infrastructure management.
+MongoDB Atlas is a fully managed cloud database service provided by MongoDB, offering automated deployment, scaling, 
+and monitoring of MongoDB clusters, allowing developers to focus on building their applications without worrying about infrastructure management.
 
 #### Mongoosejs
 
 [Mongoose](https://mongoosejs.com/)
 
-Mongoose is an Object Data Modeling (ODM) library for Node.js that provides a straightforward and elegant way to interact with MongoDB. It allows developers to define schemas and models for their data, providing structure and validation. Mongoose also offers features like data querying, middleware, and support for data relationships, making it a powerful tool for building MongoDB-based applications.
+Mongoose is an Object Data Modeling (ODM) library for Node.js that provides a straightforward and elegant way to interact with MongoDB. 
+It allows developers to define schemas and models for their data, providing structure and validation. Mongoose also offers features like 
+data querying, middleware, and support for data relationships, making it a powerful tool for building MongoDB-based applications.
 
 ```sh
 npm i mongoose@7.0.5
@@ -2233,7 +2243,10 @@ export const createJob = async (req, res) => {
 
 #### express-async-errors
 
-The "express-async-errors" package is an Express.js middleware that helps handle errors that occur within asynchronous functions. It catches unhandled errors inside async/await functions and forwards them to Express.js's error handling middleware, preventing the Node.js process from crashing. It simplifies error handling in Express.js applications by allowing you to write asynchronous code without worrying about manually catching and forwarding errors.
+The "express-async-errors" package is an Express.js middleware that helps handle errors that occur within asynchronous functions. 
+It catches unhandled errors inside async/await functions and forwards them to Express.js's error handling middleware, preventing the 
+Node.js process from crashing. It simplifies error handling in Express.js applications by allowing you to write asynchronous code 
+without worrying about manually catching and forwarding errors.
 
 [Express Async Errors](https://www.npmjs.com/package/express-async-errors)
 
@@ -2320,7 +2333,10 @@ export const updateJob = async (req, res) => {
 
 #### Status Codes
 
-A library for HTTP status codes is useful because it provides a comprehensive and standardized set of codes that represent the outcome of HTTP requests. It allows developers to easily understand and handle different scenarios during web development, such as successful responses, client or server errors, redirects, and more. By using a status code library, developers can ensure consistent and reliable communication between servers and clients, leading to better error handling and improved user experience.
+A library for HTTP status codes is useful because it provides a comprehensive and standardized set of codes that represent the outcome of HTTP requests. 
+It allows developers to easily understand and handle different scenarios during web development, such as successful responses, client or server errors, 
+redirects, and more. By using a status code library, developers can ensure consistent and reliable communication between servers and clients, leading 
+to better error handling and improved user experience.
 
 [Http Status Codes](https://www.npmjs.com/package/http-status-codes)
 
@@ -2383,21 +2399,28 @@ export class NotFoundError extends Error {
 }
 ```
 
-This code defines a custom error class NotFoundError that extends the built-in Error class in JavaScript. The NotFoundError class is designed to be used when a requested resource is not found, and it includes a status code of 404 to indicate this.
+This code defines a custom error class NotFoundError that extends the built-in Error class in JavaScript. 
+The NotFoundError class is designed to be used when a requested resource is not found, and it includes a status code of 404 to indicate this.
 
 Here's a breakdown of the code:
 
-class NotFoundError extends Error: This line defines a new class NotFoundError that extends the built-in Error class. This means that NotFoundError inherits all of the properties and methods of the Error class, and can also define its own properties and methods.
+class NotFoundError extends Error: This line defines a new class NotFoundError that extends the built-in Error class. 
+This means that NotFoundError inherits all of the properties and methods of the Error class, and can also define its own properties and methods.
 
-constructor(message): This is the constructor method for the NotFoundError class, which is called when a new instance of the class is created. The message parameter is the error message that will be displayed when the error is thrown.
+constructor(message): This is the constructor method for the NotFoundError class, which is called when a new instance of the class is created. 
+The message parameter is the error message that will be displayed when the error is thrown.
 
-super(message): This line calls the constructor of the Error class and passes the message parameter to it. This sets the error message for the NotFoundError instance.
+super(message): This line calls the constructor of the Error class and passes the message parameter to it. 
+This sets the error message for the NotFoundError instance.
 
-this.name = "NotFoundError": This line sets the name property of the NotFoundError instance to "NotFoundError". This is a built-in property of the Error class that specifies the name of the error.
+this.name = "NotFoundError": This line sets the name property of the NotFoundError instance to "NotFoundError". 
+This is a built-in property of the Error class that specifies the name of the error.
 
-this.statusCode = 404: This line sets the statusCode property of the NotFoundError instance to 404. This is a custom property that is specific to the NotFoundError class and indicates the HTTP status code that should be returned when this error occurs.
+this.statusCode = 404: This line sets the statusCode property of the NotFoundError instance to 404. This is a custom property that is 
+specific to the NotFoundError class and indicates the HTTP status code that should be returned when this error occurs.
 
-By creating a custom error class like NotFoundError, you can provide more specific error messages and properties to help with debugging and error handling in your application.
+By creating a custom error class like NotFoundError, you can provide more specific error messages and properties to help with debugging
+and error handling in your application.
 
 #### Custom Error
 
