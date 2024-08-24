@@ -503,3 +503,5 @@ Section 09: Server
 
 82. More Custom Errors
 -u customErrors.js fajlu kreiramo klase BadRequestError, UnauthenticatedError i UnauthorizedError
+
+83. Validation Layer - Intro
