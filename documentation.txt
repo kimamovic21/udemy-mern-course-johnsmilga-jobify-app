@@ -517,3 +517,16 @@ Section 09: Server
 -u anonimnoj funkciji (req, res) kreiramo varijablu const errors
 -dodajemo uslov if (!errors.isEmpty())
 -u uslovu if kreiramo varijablu const errorMessages 
+
+85. Validation Middleware
+-u folderu middleware kreiramo validationMiddleware.js fajl
+-u validationMiddleware.js fajlu kreiramo funkciju withValidationErrors() sa parametrom validateValues
+-importujemo funkcije body i validationResult iz paketa Express Validator
+-importujemo funkciju BadRequestError iz customErrors.js fajla
+-u return izjavu dodajemo niz
+-u niz dodajemo parametar validateValues i anonimnu funkciju sa parametrima (req, res, next)
+-kreiramo funkciju withValidationErrors() sa nizom kao argumentom
+-vrijednost funkcije withValidationErrors() pohranjujemo u varijablu const validateTest
+-eksportujemo varijablu validateTest
+-u server.js fajl importujemo funkciju validateTest
+-u metodu app.post() dodajemo funkciju validateTest
