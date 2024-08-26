@@ -551,3 +551,14 @@ Section 09: Server
 -u funkciji withValidationErrors() kreiramo niz za validaciju parametra
 -u jobRouter.js fajl importujemo funkciju validateIdParam
 -u Postman-u testiramo rutu za izmjenu podataka jednog posla po id-u
+
+89. Validate Job
+-u validationMiddleware.js fajlu, u funkciji validateIdParam() kreiramo varijablu const isValidId
+-importujemo model Job
+-importujemo funkciju NotFoundError iz customErrors.js fajla
+-dodajemo uslov if (!isValidId)
+-kreiramo varijablu const job
+-dodajemo uslov if (!job)
+-u uslov if (!errors.isEmpty()) dodajemo jos jedan uslov if (errorMessages[0].startsWith('no job'))
+-u jobController.js fajlu brisemo uslove if
+-brisemo varijable const { id }
