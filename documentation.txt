@@ -562,3 +562,9 @@ Section 09: Server
 -u uslov if (!errors.isEmpty()) dodajemo jos jedan uslov if (errorMessages[0].startsWith('no job'))
 -u jobController.js fajlu brisemo uslove if
 -brisemo varijable const { id }
+
+90. User Model
+-u folderu models kreiramo UserModel.js fajl
+-kreiramo varijablu const UserSchema
+-eksportujemo model kao default User
+-iz baze MongoDB izbrisemo postojece poslove
