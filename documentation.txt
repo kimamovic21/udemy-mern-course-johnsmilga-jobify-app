@@ -530,3 +530,9 @@ Section 09: Server
 -eksportujemo varijablu validateTest
 -u server.js fajl importujemo funkciju validateTest
 -u metodu app.post() dodajemo funkciju validateTest
+
+86. Constants
+-kreiramo foler utils i constants.js fajl
+-u constants.js fajlu kreiramo i eksportujemo varijable JOB_STATUS, JOB_TYPE, JOB_SORT_BY
+-u model JobModel.js fajl importujemo kreirane varijable konstante
+-u opcije enum dodajemo metode Object.values(JOB_STATUS) i Object.values(JOB_TYPE) 
