@@ -544,3 +544,10 @@ Section 09: Server
 -u jobRouter.js fajl importujemo funkciju validateJobInput
 -u rute za poslove dodajemo funkciju validateJobInput
 -testiramo rute u Postman-u za kreiranje poslova i izmjenu informacija o poslu
+
+88. Validate ID Params
+-u validationMiddleware.js fajl importujemo funkciju param iz paketa Express Validator
+-kreiramo i eksportujemo varijablu const validateIdParam
+-u funkciji withValidationErrors() kreiramo niz za validaciju parametra
+-u jobRouter.js fajl importujemo funkciju validateIdParam
+-u Postman-u testiramo rutu za izmjenu podataka jednog posla po id-u
