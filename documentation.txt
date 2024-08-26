@@ -536,3 +536,11 @@ Section 09: Server
 -u constants.js fajlu kreiramo i eksportujemo varijable JOB_STATUS, JOB_TYPE, JOB_SORT_BY
 -u model JobModel.js fajl importujemo kreirane varijable konstante
 -u opcije enum dodajemo metode Object.values(JOB_STATUS) i Object.values(JOB_TYPE) 
+
+87. Validate Job Input
+-u validationMiddleware.js fajlu kreiramo i eksportujemo varijablu validateJobInput
+-importujemo varijable konstante JOB_STATUS, JOB_TYPE
+-u funkciju withValidationErrors() dodajemo niz za validaciju polja
+-u jobRouter.js fajl importujemo funkciju validateJobInput
+-u rute za poslove dodajemo funkciju validateJobInput
+-testiramo rute u Postman-u za kreiranje poslova i izmjenu informacija o poslu
