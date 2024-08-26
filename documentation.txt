@@ -568,3 +568,16 @@ Section 09: Server
 -kreiramo varijablu const UserSchema
 -eksportujemo model kao default User
 -iz baze MongoDB izbrisemo postojece poslove
+
+91. User Controller and Router
+-u folderu controllers kreiramo asinhrone funkcije register() i login()
+-u folderu routes kreiramo authRouter.js fajl
+-u authRouter.js fajl imporujemo funkciju Router
+-importujemo funkcije register i login i authController.js fajla
+-kreiramo dvije metode router.post() za rute register i login
+-varijablu router eksportujemo kao default
+-u server.js fajl importujemo varijablu router iz authRouter.js fajla kao authRouter
+-kreiramo metodu app.use('/api/v1/auth')
+-u Postman-u kreiramo folder Auth Routes
+-u folderu Auth Routes kreiramo dva zahtjeva za rute register i login sa metodom POST
+-testiramo kreirane rute
