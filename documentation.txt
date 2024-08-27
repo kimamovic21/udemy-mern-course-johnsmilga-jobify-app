@@ -586,3 +586,14 @@ Section 09: Server
 -u authController.js fajlu, u funkciji register() kreiramo varijablu const user
 -dodajemo metodu res.status(StatusCodes.CREATED)
 -u Postman-u testiramo rutu za kreiranje korisnika
+
+93. Validate Register User
+-u validationMiddleware.js fajlu kreiramo i eksportujemo varijablu export const validateRegisterInput
+-importujemo model User iz UserModel.js fajla
+-u funkciju withValidationErrors() dodajemo niz za validaciju
+-u funkciju custom() dodajemo asinhronu anonimnu funkciju sa parametrom email
+-u anonimnoj funkciji kreiramo varijablu const user
+-dodajemo uslov if (user)
+-u uslovu if (user) dodajemo funkciju throw new BadRequestError()
+-u authRouter.js fajl imporujemo funkciju validateRegisterInput
+-u metodu app.post() za registraciju dodajemo funkciju validateRegisterInput
