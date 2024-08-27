@@ -650,3 +650,7 @@ Section 09: Server
 -vrijednost funkcije createJWT() pohranjujemo u varijablu const token
 -dodajemo metodu res.send({ token })
 -u Postman-u testiramo rutu za prijavu korisnika
+
+100. JWT ENV
+-u fajlovima .env i .env.example kreiramo varijable JWT_SECRET i JWT_EXPIRES_IN
+-u tokenUtils.js fajl dodajemo kreirane varijable iz .env fajla
