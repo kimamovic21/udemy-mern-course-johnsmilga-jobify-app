@@ -597,3 +597,9 @@ Section 09: Server
 -u uslovu if (user) dodajemo funkciju throw new BadRequestError()
 -u authRouter.js fajl imporujemo funkciju validateRegisterInput
 -u metodu app.post() za registraciju dodajemo funkciju validateRegisterInput
+-u Postman-u testiramo rutu za kreiranje korisnika da provjerimo validaciju
+
+94. Admin User
+-u authController.js fajlu, u funkciji register() dodajemo logiku da prvi kreirani korisnik ima rolu admin¸
+-kreiramo varijablu const isFirstAccount
+-u Postman-u testiramo rutu za kreiranje korisnika kreirajuci drugog korisnika 
