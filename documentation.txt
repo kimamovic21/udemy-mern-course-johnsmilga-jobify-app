@@ -636,3 +636,17 @@ Section 09: Server
 -importujemo funkciju UnauthenticatedError 
 -u uslov if(!isValidUser) dodajemo funkciju UnauthenticatedError()
 -u Postman-u testiramo rutu za prijavu korisnika
+
+99. JWT (JSON Web Token)
+-otvorimo web stranicu https://jwt.io/
+-u folderu utils kreiramo tokenUtils.js fajl
+-u tokenUtils.js fajl importujemo instancu jwt iz pakete Json Web Token
+-kreiramo i eksportujemo funkciju create JWT() sa parametrom payload
+-u funkciji createJWT() kreiramo varijablu const token
+-u authController.js fajl importujemo funkciju createJWT
+-importujemo funkciju createJWT iz tokenUtils.js fajla
+-u funkciju login() dodajemo funkciju createJWT()
+-funkciji createJWT() dodajemo argument objekt sa informacijama o korisnikovom id-u i roli
+-vrijednost funkcije createJWT() pohranjujemo u varijablu const token
+-dodajemo metodu res.send({ token })
+-u Postman-u testiramo rutu za prijavu korisnika
