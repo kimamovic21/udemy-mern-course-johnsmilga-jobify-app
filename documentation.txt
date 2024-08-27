@@ -572,7 +572,7 @@ Section 09: Server
 91. User Controller and Router
 -u folderu controllers kreiramo asinhrone funkcije register() i login()
 -u folderu routes kreiramo authRouter.js fajl
--u authRouter.js fajl imporujemo funkciju Router
+-u authRouter.js fajl importujemo funkciju Router
 -importujemo funkcije register i login i authController.js fajla
 -kreiramo dvije metode router.post() za rute register i login
 -varijablu router eksportujemo kao default
@@ -595,7 +595,7 @@ Section 09: Server
 -u anonimnoj funkciji kreiramo varijablu const user
 -dodajemo uslov if (user)
 -u uslovu if (user) dodajemo funkciju throw new BadRequestError()
--u authRouter.js fajl imporujemo funkciju validateRegisterInput
+-u authRouter.js fajl importujemo funkciju validateRegisterInput
 -u metodu app.post() za registraciju dodajemo funkciju validateRegisterInput
 -u Postman-u testiramo rutu za kreiranje korisnika da provjerimo validaciju
 
@@ -621,4 +621,18 @@ Section 09: Server
 -u funkciju withValidationErrors() dodajemo niz za validaciju login polja
 -u authRouter.js fajl importujemo funkciju validateLoginInput
 -u rutu za login dodajemo funkciju validateLoginInput
+-u Postman-u testiramo rutu za prijavu korisnika
+
+98. Login Logic
+-u authController.js fajlu, u funkciji login() kreiramo varijablu const user
+-dodajemo uslov if(!user)
+-u passwordUtils.js fajlu kreiramo i eksportujemo asinhronu funkciju comparePassword() sa parametrima password i hashPassword
+-u funkciji comparePassword() kreiramo varijablu const isMatch
+-u authController.js fajl importujemo funkciju comparePassword() iz passwordUtils.js fajl
+-u authController.js fajlu u funkciji login() kreiramo varijablu const isPasswordCorrect
+-dodajemo uslov if (!isPasswordCorrect)
+-kreiramo varijablu const isValidUser
+-dodajemo uslov if (!isValidUser)
+-importujemo funkciju UnauthenticatedError 
+-u uslov if(!isValidUser) dodajemo funkciju UnauthenticatedError()
 -u Postman-u testiramo rutu za prijavu korisnika
