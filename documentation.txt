@@ -581,3 +581,8 @@ Section 09: Server
 -u Postman-u kreiramo folder Auth Routes
 -u folderu Auth Routes kreiramo dva zahtjeva za rute register i login sa metodom POST
 -testiramo kreirane rute
+
+92. Create User
+-u authController.js fajlu, u funkciji register() kreiramo varijablu const user
+-dodajemo metodu res.status(StatusCodes.CREATED)
+-u Postman-u testiramo rutu za kreiranje korisnika
