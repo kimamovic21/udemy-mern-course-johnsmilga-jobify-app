@@ -607,3 +607,11 @@ Section 09: Server
 95. Hash Password
 -u authController.js fajl importujemo instancu bcrypt iz paketa Bcrypt.js
 -kreiramo varijable const salt i const hashedPassword
+
+96. Hash Utils
+-u folderu utils kreiramo passwordUtils.js fajl
+-u passwordUtils.js fajlu kreiramo i eksportujemo asinhronu funkciju hashPassword() sa parametrom password
+-u authController.js fajl importujemo funkciju hashPassword
+-u funkciju register() dodajemo funkciju hashPassword()
+-u funkciju hashPassword() proslijedujemo argument req.body.password
+-u Postman-u testiramo rutu za kreiranje korisnika
