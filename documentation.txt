@@ -603,3 +603,7 @@ Section 09: Server
 -u authController.js fajlu, u funkciji register() dodajemo logiku da prvi kreirani korisnik ima rolu admin¸
 -kreiramo varijablu const isFirstAccount
 -u Postman-u testiramo rutu za kreiranje korisnika kreirajuci drugog korisnika 
+
+95. Hash Password
+-u authController.js fajl importujemo instancu bcrypt iz paketa Bcrypt.js
+-kreiramo varijable const salt i const hashedPassword
