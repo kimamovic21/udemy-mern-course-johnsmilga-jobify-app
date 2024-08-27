@@ -615,3 +615,10 @@ Section 09: Server
 -u funkciju register() dodajemo funkciju hashPassword()
 -u funkciju hashPassword() proslijedujemo argument req.body.password
 -u Postman-u testiramo rutu za kreiranje korisnika
+
+97. Validate Login
+-u validationMiddleware.js fajlu kreiramo i eksportujemo varijablu const validateLoginInput
+-u funkciju withValidationErrors() dodajemo niz za validaciju login polja
+-u authRouter.js fajl importujemo funkciju validateLoginInput
+-u rutu za login dodajemo funkciju validateLoginInput
+-u Postman-u testiramo rutu za prijavu korisnika
