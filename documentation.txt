@@ -669,3 +669,13 @@ Section 09: Server
 -u server.js fajl importujemo funkciju authenticateUser
 -u metodu app.use() za rute za poslove dodajemo funkciju authenticateUser
 -u Postman-u testiramo rutu za dohvacanje svih poslova
+
+103. Verify Cookie
+-u server.js fajl importujemo instancu cookieParser
+-kreiramo metodu app.use(cookieParser())
+-u Postman-u testiramo rutu za dohvacanje svih poslova
+-u authMiddleware.js fajlu, u funkciji authenticateUser() destruktuiramo varijablu const { token } 
+-dodajemo uslov if (!token)
+-importujemo funkciju UnauthenticatedError
+-u uslov if dodajemo funkciju UnauthenticatedError()
+-u Postman-u testiramo rute za prijavu korisnika i dohvacanje svih poslova
