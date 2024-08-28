@@ -704,3 +704,12 @@ Section 09: Server
 -u funkciju withValidationErrors() dodajemo uslov if (errorMessages[0].startsWith('not authorized'))
 -u uslov if dodajemo funkciju UnauthorizedError()
 -u Postman-u testiramo rutu za pretrazivanje posla po id-u
+
+107. Logout Controller
+-u authController.js fajlu kreiramo i eksportujemo funkciju logout()
+-u funkciji logout() kreiramo metodu res.cookie()
+-dodajemo metodu res.status(StatusCodes.OK)
+-u authRouter.js fajl importujemo funkciju logout iz authController.js fajla
+-kreiramo metodu router.get('/logout', logout)
+-u Postman-u kreiramo i testiramo rutu Logout User sa metodom GET za odjavu korisnika
+-testiramo rute za dohvacanje svih poslova
