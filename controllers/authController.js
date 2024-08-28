@@ -25,9 +25,6 @@ export const login = async (req, res) => {
     userId: user._id, 
     role: user.role 
   });
-  console.log('token: ', token);
-
-  res.send({ token });
 
   const oneDay = 1000 * 60 * 60 * 24;
 

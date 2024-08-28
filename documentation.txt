@@ -661,3 +661,11 @@ Section 09: Server
 -kreiramo varijablu const oneDay
 -u Postman-u testiramo rutu za login
 -u Postman-u pogledamo vrijednost za opciju Cookie
+
+102. Authenticate User Setup
+-u JobModel.js fajlu, dodajemo konfiguracioni objekt createdBy
+-u folderu middleware kreiramo authMiddleware.js fajl
+-u authMiddleware.js fajlu kreiramo i eksportujemo asinhronu funkciju authenticateUser sa parametrima req, res i next
+-u server.js fajl importujemo funkciju authenticateUser
+-u metodu app.use() za rute za poslove dodajemo funkciju authenticateUser
+-u Postman-u testiramo rutu za dohvacanje svih poslova
