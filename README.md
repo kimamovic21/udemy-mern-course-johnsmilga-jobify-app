@@ -3089,11 +3089,15 @@ JWT_EXPIRES_IN=
 
 #### HTTP Only Cookie
 
-An HTTP-only cookie is a cookie that can't be accessed by JavaScript running in the browser. It is designed to help prevent cross-site scripting (XSS) attacks, which can be used to steal cookies and other sensitive information.
+An HTTP-only cookie is a cookie that can't be accessed by JavaScript running in the browser. It is designed to help prevent cross-site scripting (XSS) attacks, 
+which can be used to steal cookies and other sensitive information.
 
 ##### HTTP Only Cookie VS Local Storage
 
-An HTTP-only cookie is a type of cookie that is designed to be inaccessible to JavaScript running in the browser. It is primarily used for authentication purposes and is a more secure way of storing sensitive information like user tokens. Local storage, on the other hand, is a browser-based storage mechanism that is accessible to JavaScript, and is used to store application data like preferences or user-generated content. While local storage is convenient, it is not a secure way of storing sensitive information as it can be accessed and modified by JavaScript running in the browser.
+An HTTP-only cookie is a type of cookie that is designed to be inaccessible to JavaScript running in the browser. It is primarily used for authentication 
+purposes and is a more secure way of storing sensitive information like user tokens. Local storage, on the other hand, is a browser-based storage mechanism 
+that is accessible to JavaScript, and is used to store application data like preferences or user-generated content. While local storage is convenient, 
+it is not a secure way of storing sensitive information as it can be accessed and modified by JavaScript running in the browser.
 
 authControllers.js
 
@@ -3113,19 +3117,25 @@ res.status(StatusCodes.CREATED).json({ msg: 'user logged in' });
 const oneDay = 1000 * 60 * 60 * 24;
 ```
 
-This line defines a constant oneDay that represents the number of milliseconds in a day. This value is used later to set the expiration time for the cookie.
+This line defines a constant oneDay that represents the number of milliseconds in a day. 
+This value is used later to set the expiration time for the cookie.
 
 ```js
 res.cookie('token', token, {...});:
 ```
 
-This line sets a cookie with the name "token" and a value of token, which is the JWT that was generated for the user. The ... represents an object containing additional options for the cookie.
+This line sets a cookie with the name "token" and a value of token, which is the JWT that was generated for the user. 
+The ... represents an object containing additional options for the cookie.
 
-httpOnly: true: This option makes the cookie inaccessible to JavaScript running in the browser. This helps to prevent cross-site scripting (XSS) attacks, which can be used to steal cookies and other sensitive information.
+httpOnly: true: This option makes the cookie inaccessible to JavaScript running in the browser. This helps to prevent cross-site scripting (XSS) attacks, 
+which can be used to steal cookies and other sensitive information.
 
-expires: new Date(Date.now() + oneDay): This option sets the expiration time for the cookie. In this case, the cookie will expire one day from the current time (as represented by Date.now() + oneDay).
+expires: new Date(Date.now() + oneDay): This option sets the expiration time for the cookie. In this case, the cookie will expire one day from the 
+current time (as represented by Date.now() + oneDay).
 
-secure: process.env.NODE_ENV === 'production': This option determines whether the cookie should be marked as secure or not. If the NODE_ENV environment variable is set to "production", then the cookie is marked as secure, which means it can only be transmitted over HTTPS. This helps to prevent man-in-the-middle (MITM) attacks, which can intercept and modify cookies that are transmitted over unsecured connections.
+secure: process.env.NODE_ENV === 'production': This option determines whether the cookie should be marked as secure or not. If the NODE_ENV environment variable
+is set to "production", then the cookie is marked as secure, which means it can only be transmitted over HTTPS. This helps to prevent man-in-the-middle 
+(MITM) attacks, which can intercept and modify cookies that are transmitted over unsecured connections.
 
 jobsController.js
 
