@@ -689,3 +689,9 @@ Section 09: Server
 -vrijednost funkcije verifyJWT(token) pohranjujemo u varijablu const user
 -iz funkcije verifyJWT(token) destruktuiramo varijable const { userId, role } 
 -u Postman-u testiramo rute za prijavu korisnika i dohvacanje svih poslova
+
+105. Add User to Job Routes
+-u jobController.js fajl, u funkciju getAllJobs() u metodu Job.find() dodajemo opciju createdBy
+-u funkciju createJob() dodajemo metodu req.body.createdBy 
+-u Postman-u testiramo rute za novi posao sa drugim korisnikom
+-u Postman-u testiramo rute za registraciju, prijavu, kreiranje i pretrazivanje svih poslova
