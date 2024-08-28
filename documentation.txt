@@ -695,3 +695,12 @@ Section 09: Server
 -u funkciju createJob() dodajemo metodu req.body.createdBy 
 -u Postman-u testiramo rute za novi posao sa drugim korisnikom
 -u Postman-u testiramo rute za registraciju, prijavu, kreiranje i pretrazivanje svih poslova
+
+106. Validate Owner
+-u validationMiddleware.js fajlu, u funkciji validateIdParam kreiramo varijable const isAdmin i const isOwner
+-dodajemo uslov if (!isAdmin && !isOwner) 
+-importujemo funkciju UnauthorizedError() iz customErrors.js fajla
+-u uslov if dodajemo funkciju UnauthorizedError()
+-u funkciju withValidationErrors() dodajemo uslov if (errorMessages[0].startsWith('not authorized'))
+-u uslov if dodajemo funkciju UnauthorizedError()
+-u Postman-u testiramo rutu za pretrazivanje posla po id-u
