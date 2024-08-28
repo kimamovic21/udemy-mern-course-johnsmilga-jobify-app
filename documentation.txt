@@ -679,3 +679,13 @@ Section 09: Server
 -importujemo funkciju UnauthenticatedError
 -u uslov if dodajemo funkciju UnauthenticatedError()
 -u Postman-u testiramo rute za prijavu korisnika i dohvacanje svih poslova
+
+104. Verify JWT
+-u tokenUtils.js fajlu kreiramo i eksportujemo funkciju verifyJWT() sa parametrom token
+-u funkciji verifyJWT() kreiramo varijablu const decoded
+-u authMiddleware.js fajl importujemo funkciju verifyJWT
+-u funkciji authenticateUser() kreiramo blokove koda try - catch
+-u blok koda try dodajemo funkciju verifyJWT(token)
+-vrijednost funkcije verifyJWT(token) pohranjujemo u varijablu const user
+-iz funkcije verifyJWT(token) destruktuiramo varijable const { userId, role } 
+-u Postman-u testiramo rute za prijavu korisnika i dohvacanje svih poslova
