@@ -713,3 +713,15 @@ Section 09: Server
 -kreiramo metodu router.get('/logout', logout)
 -u Postman-u kreiramo i testiramo rutu Logout User sa metodom GET za odjavu korisnika
 -testiramo rute za dohvacanje svih poslova
+
+108. User Routes
+-u folderu controllers kreiramo userController.js fajl
+-u userController.js fajl importujemo instancu StatusCodes
+-kreiramo i eksportujemo funkcije getCurrentUser(), getApplicationStats(), getCurrentUser()
+-u folderu routes kreiramo userRouter.js fajl
+-u userRouter.js fajlu kreiramo dvije metode router.get() i jednu metodu router.patch()
+-importujemo funkcije iz authController.js fajla
+-u server.js fajl importujemo funkciju userRouter iz userRouter.js fajla
+-kreiramo metodu app.use() za funkciju userRouter
+-u Postman-u kreiramo folder User Routes
+-kreiramo i testiramo rute Get Current User, Get Application Stats, Update User
