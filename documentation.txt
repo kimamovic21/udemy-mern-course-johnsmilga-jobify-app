@@ -741,3 +741,12 @@ Section 09: Server
 -u userController.js fajlu, u funkciji updateUser() kreiramo varijablu const obj = { ...req.body }
 -dodajemo metodu delete obj.password
 -u Postman-u testiramo rutu za izmjenu podataka korisnika
+
+111. Get Application Stats
+-u userController.js fajl importujemo model Job
+-u userController.js fajlu, u funkciji getApplicationStats() kreiramo varijable const users i const jobs
+-u authMiddleware.js fajlu kreiramo i eksportujemo funkciju authorizePermissions() sa parametrom ...roles
+-importujemo funkciju UnauthorizedError 
+-u userRouter.js fajl importujemo funkciju authorizePermissions
+-u metodu router.get() za dohvacanje podataka o statistici dodajemo niz i funkciju authorizePermissions()
+-u Postman-u testiramo rute za prijavu korisnika i dohvacanje podataka o statistici
