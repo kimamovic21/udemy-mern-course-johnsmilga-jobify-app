@@ -731,3 +731,13 @@ Section 09: Server
 -u userController.js fajlu, u funkciji getCurrentUser() kreiramo varijablu const user
 -kreiramo varijablu const userWithoutPassword
 -u UserModel.js fajl dodajemo metodu UserSchema.methods.toJSON
+
+110. Update User
+-u userController.js fajlu, u funkciji updateUser() kreiramo varijablu const updatedUser
+-u validationMiddleware.js fajlu kreiramo i eksportujemo varijablu validateUpdateUserInput
+-u funkciju withValidationErrors() dodajemo niz za validaciju polja
+-u userRouter.js fajl importujemo funkciju validateUpdateUserInput
+-u rutu za router.patch() dodajemo funkciju validateUpdateUserInput
+-u userController.js fajlu, u funkciji updateUser() kreiramo varijablu const obj = { ...req.body }
+-dodajemo metodu delete obj.password
+-u Postman-u testiramo rutu za izmjenu podataka korisnika
