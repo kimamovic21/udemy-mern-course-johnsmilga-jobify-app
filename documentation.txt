@@ -718,6 +718,7 @@ Section 09: Server
 -u folderu controllers kreiramo userController.js fajl
 -u userController.js fajl importujemo instancu StatusCodes
 -kreiramo i eksportujemo funkcije getCurrentUser(), getApplicationStats(), getCurrentUser()
+-u kreirane funkcije dodajemo metode res.status(StatusCodes.OK)
 -u folderu routes kreiramo userRouter.js fajl
 -u userRouter.js fajlu kreiramo dvije metode router.get() i jednu metodu router.patch()
 -importujemo funkcije iz authController.js fajla
@@ -725,3 +726,8 @@ Section 09: Server
 -kreiramo metodu app.use() za funkciju userRouter
 -u Postman-u kreiramo folder User Routes
 -kreiramo i testiramo rute Get Current User, Get Application Stats, Update User
+
+109. Get Current User
+-u userController.js fajlu, u funkciji getCurrentUser() kreiramo varijablu const user
+-kreiramo varijablu const userWithoutPassword
+-u UserModel.js fajl dodajemo metodu UserSchema.methods.toJSON
