@@ -3581,11 +3581,14 @@ npm i concurrently@8.0.1
   },
 ```
 
-By default, when a command fails, concurrently continues running the remaining commands. However, when --kill-others-on-fail is specified, if any of the commands fail, concurrently will immediately terminate all the other running commands.
+By default, when a command fails, concurrently continues running the remaining commands. However, when --kill-others-on-fail is specified, 
+if any of the commands fail, concurrently will immediately terminate all the other running commands.
 
 #### Axios
 
-Axios is a popular JavaScript library that simplifies the process of making HTTP requests from web browsers or Node.js. It provides a simple and elegant API for performing asynchronous HTTP requests, supporting features such as making GET, POST, PUT, and DELETE requests, handling request and response headers, handling request cancellation, and more.
+Axios is a popular JavaScript library that simplifies the process of making HTTP requests from web browsers or Node.js. It provides a simple 
+and elegant API for performing asynchronous HTTP requests, supporting features such as making GET, POST, PUT, and DELETE requests, handling 
+request and response headers, handling request cancellation, and more.
 
 [Axios Docs](https://axios-http.com/docs/intro)
 

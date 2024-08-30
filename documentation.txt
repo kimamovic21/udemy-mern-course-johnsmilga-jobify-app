@@ -759,3 +759,15 @@ Section 09: Server
 
 113. Concurrently
 -u package.json fajlu dodajemo komandu "dev" za paket Concurrently
+
+114. Axios
+-u main.jsx fajl importujemo instancu axios iz paketa Axios
+-kreiramo metodu await axios.get()
+-vrijednost metode axios.get() pohranjujemo u varijablu const data
+-u folderu client, u folderu utils kreiramo customFetch.js fajl
+-u customFetch.js fajl importujemo instancu axios iz paketa Axios
+-kreiramo metodu axios.create()
+-u funkciji create() kreiramo konfiguracioni objekt
+-vrijednost metode axios.create() pohranjujemo u varijablu const customFetch
+-varijablu customFetch eksportujemo kao default
+-u main.jsx importujemo funkciju customFetch
