@@ -756,3 +756,6 @@ Section 09: Server
 -u folderu client u main.jsx fajlu kreiramo metodu fetch()
 -u vite.config.js fajl, u funkciju defineConfig() dodajemo konfiguracioni objekt server
 -kad otvorimo Vite React.js aplikaciju u konzoli trebamo vidjeti {msg: 'test route'}
+
+113. Concurrently
+-u package.json fajlu dodajemo komandu "dev" za paket Concurrently

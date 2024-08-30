@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently --kill-others-on-fail \" npm run server\" \" npm run client\"",
+    "watch": "node --watch server.js",
     "setup-project": "npm i && cd client && npm i",
-    "dev": "nodemon server.js",
-    "watch": "node --watch server.js"
+    "server": "nodemon server",
+    "client": "cd client && npm run dev"
   },
   "repository": {
     "type": "git",
