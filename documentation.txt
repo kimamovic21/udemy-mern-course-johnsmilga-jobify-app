@@ -750,3 +750,9 @@ Section 09: Server
 -u userRouter.js fajl importujemo funkciju authorizePermissions
 -u metodu router.get() za dohvacanje podataka o statistici dodajemo niz i funkciju authorizePermissions()
 -u Postman-u testiramo rute za prijavu korisnika i dohvacanje podataka o statistici
+
+112. Proxy Setup
+-u server.js fajlu kreiramo metodu app.get() za rutu /api/v1/test
+-u folderu client u main.jsx fajlu kreiramo metodu fetch()
+-u vite.config.js fajl, u funkciju defineConfig() dodajemo konfiguracioni objekt server
+-kad otvorimo Vite React.js aplikaciju u konzoli trebamo vidjeti {msg: 'test route'}
