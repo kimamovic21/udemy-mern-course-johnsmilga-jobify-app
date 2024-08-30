@@ -782,3 +782,15 @@ Section 09: Server
 -u komponenti Register kreiramo i eksportujemo asinhronu funkciju action()
 -u komponentu App.jsx importujemo funkciju action ako registerAction
 -u objekt rutu za register dodajemo funkciju registerAction 
+
+117. Register User Complete
+-u komponenti Register.jsx, u funkciju action dodajemo parametar destruktuirani prop request
+-dodajemo metodu await request.formData()
+-vrijednost metode request.formData() pohranjujemo u varijablu const formData
+-dodajemo metodu Object.fromEntries(formData)
+-vrijednost ove metode pohranjujemo u varijablu const data
+-kreiramo blokove koda try - catch
+-importujemo funkciju customFetch
+-u blok koda try dodajemo metodu await customFetch.post()
+-dodajemo funkciju return redirect()
+-nakon sto ispunimo formu sa podacima kliknemo na submit dugme
