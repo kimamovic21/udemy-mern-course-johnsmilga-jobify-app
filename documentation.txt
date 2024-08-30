@@ -794,3 +794,10 @@ Section 09: Server
 -u blok koda try dodajemo metodu await customFetch.post()
 -dodajemo funkciju return redirect()
 -nakon sto ispunimo formu sa podacima kliknemo na submit dugme
+
+118. Navigation State
+-u komponenti Register.jsx kreiramo varijablu const navigation
+-kreiramo varijablu const isSubmitting
+-u jsx-u button elementu dodajemo atribut disabled
+-u atribut disabled proslijedujemo vrijednost varijable isSubmitting
+-u button element dodajemo ternarni uslov za varijablu isSubmitting
