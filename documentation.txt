@@ -810,3 +810,25 @@ Section 10: Register Page
 -u komponentu Register.jsx importujemo funkciju toast iz paketa React Toastify
 -u blok koda try dodajemo funkciju toast.success()
 -u blok koda catch dodajemo funkciju toast.error()
+
+
+Section 11: Dashboard and Login
+
+120. Login User
+-u komponentu Login importujemo komponentu Form i funkcije redirect i useNavigation iz pakete React Router Dom
+-importujemo funkciju toast
+-importujemo funkciju customFetch 
+-kreiramo i eksportujemo asinhronu funkciju action 
+-funkciji action() dodajemo parametar destruktuirani prop request
+-u komponentu App.jsx importujemo funkciju action kao loginAction iz komponente Login.jsx
+-u objekt rutu za login dodajemo key value par action i loginAction
+-u funkciji action() kreiramo varijable const formData i const data
+-kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu metodu await customFetch.post()
+-dodajemo funkciju toast.success()
+-dodajemo funkciju return redirect()
+-u funkciji Login() kreiramo variable const navigation i const isSubmitting 
+-umjesto elementa form dodajemo komponentu Form
+-button elementu submit dodajemo atribut disabled
+-u atribut disabled proslijedujemo vrijednost variable isSubmitting
+-u button elementu dodajemo ternarni uslov isSubmitting
