@@ -773,3 +773,12 @@ Section 09: Server
 -u main.jsx importujemo funkciju customFetch
 
 115. React Router Action Intro
+
+116. First Action
+-u komponentu Register.jsx importujemo komponentu Form i funkcije redirect, useNavigation iz paketa React Router Dom
+-u jsx dodajemo komponentu Form
+-komponenti Form dodajemo prop method
+-u komponenti App.jsx, u objekt rutu za register dodajemo key value par action i anonimnu funkciju
+-u komponenti Register kreiramo i eksportujemo asinhronu funkciju action()
+-u komponentu App.jsx importujemo funkciju action ako registerAction
+-u objekt rutu za register dodajemo funkciju registerAction 
