@@ -772,6 +772,9 @@ Section 09: Server
 -varijablu customFetch eksportujemo kao default
 -u main.jsx importujemo funkciju customFetch
 
+
+Section 10: Register Page
+
 115. React Router Action Intro
 
 116. First Action
@@ -801,3 +804,9 @@ Section 09: Server
 -u jsx-u button elementu dodajemo atribut disabled
 -u atribut disabled proslijedujemo vrijednost varijable isSubmitting
 -u button element dodajemo ternarni uslov za varijablu isSubmitting
+
+119. React Toastify
+-u main.jsx fajl importujemo komponentu ToastContainer i stil za ovu komponentu
+-u komponentu Register.jsx importujemo funkciju toast iz paketa React Toastify
+-u blok koda try dodajemo funkciju toast.success()
+-u blok koda catch dodajemo funkciju toast.error()
