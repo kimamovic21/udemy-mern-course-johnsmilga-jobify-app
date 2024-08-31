@@ -832,3 +832,11 @@ Section 11: Dashboard and Login
 -button elementu submit dodajemo atribut disabled
 -u atribut disabled proslijedujemo vrijednost variable isSubmitting
 -u button elementu dodajemo ternarni uslov isSubmitting
+
+121. UseActionData Hook (optional)
+-u komponenti Login.jsx kreiramo varijablu const errors
+-dodajemo uslov if (data.password.length < 3)
+-importujemo funkciju useActionData
+-u funkciju Login() kreiramo funkciju useActionData()
+-vrijednost funkcije useActionData() pohranjujemo u varijablu const errors
+-u jsx dodajemo uslov {errors?.msg && <p>...</p>} za prikazivanje error poruke
