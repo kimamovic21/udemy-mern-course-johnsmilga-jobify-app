@@ -2,19 +2,23 @@ import { createContext, useContext, useState } from 'react'
 import { Outlet, redirect, useLoaderData } from 'react-router-dom'
 import { BigSidebar, Navbar, SmallSidebar } from '../components'
 import { checkDefaultTheme } from '../App'
+import customFetch from '../utils/customFetch'
 import Wrapper from '../assets/wrappers/Dashboard'
 
 const DashboardContext = createContext()
 
 export const loader = async () => {
-  return 'hello world'
+  try {
+    const { data } = await customFetch('/users/current-user')
+    return data
+  } catch (error) {
+    return redirect('/')
+  }
 }
 
 const DashboardLayout = () => {
-  const data = useLoaderData()
-  console.log(data)
-  // temp
-  const user = { name: 'john' }
+  const { user } = useLoaderData()
+  console.log(user)
 
   const [showSidebar, setShowSidebar] = useState(false)
   const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme())
@@ -51,7 +55,7 @@ const DashboardLayout = () => {
           <div>
             <Navbar />
             <div className='dashboard-page'>
-              <Outlet />
+              <Outlet context={{ user }} />
             </div>
           </div>
         </main>

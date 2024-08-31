@@ -846,3 +846,13 @@ Section 11: Dashboard and Login
 -importujemo funkcije redirect i useLoaderData
 -u komponentu App.jsx importujemo funkciju loader kao dashboardLoader
 -u objekt rutu za dashboard dodajemo key value par loader i funkciju dashboardLoader
+
+123. Get Current User
+-u komponentu DashboardLayout.jsx importujemo funkciju customFetch
+-u funkciji loader kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu await customFetch.get()
+-vrijednost metode customFetch.get() pohranjujemo u varijablu const { data }
+-u blok koda catch dodajemo funkciju redirect()
+-u funkciji DashboardLayout(), iz funkcije useLoaderData() destruktuiramo varijablu const { user }
+-u jsx-u komponenti Outlet dodajemo prop context
+-u pro context proslijedujemo objekt i varijablu user 
