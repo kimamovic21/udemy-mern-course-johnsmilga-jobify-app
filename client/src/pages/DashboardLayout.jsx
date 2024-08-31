@@ -1,12 +1,18 @@
 import { createContext, useContext, useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, redirect, useLoaderData } from 'react-router-dom'
 import { BigSidebar, Navbar, SmallSidebar } from '../components'
 import { checkDefaultTheme } from '../App'
 import Wrapper from '../assets/wrappers/Dashboard'
 
 const DashboardContext = createContext()
 
+export const loader = async () => {
+  return 'hello world'
+}
+
 const DashboardLayout = () => {
+  const data = useLoaderData()
+  console.log(data)
   // temp
   const user = { name: 'john' }
 

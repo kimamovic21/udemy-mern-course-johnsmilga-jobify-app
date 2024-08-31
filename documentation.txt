@@ -840,3 +840,9 @@ Section 11: Dashboard and Login
 -u funkciju Login() kreiramo funkciju useActionData()
 -vrijednost funkcije useActionData() pohranjujemo u varijablu const errors
 -u jsx dodajemo uslov {errors?.msg && <p>...</p>} za prikazivanje error poruke
+
+122. Loaders
+-u komponenti DashboardLayout.jsx kreiramo i eksportujemo asinhronu funkciju loader()
+-importujemo funkcije redirect i useLoaderData
+-u komponentu App.jsx importujemo funkciju loader kao dashboardLoader
+-u objekt rutu za dashboard dodajemo key value par loader i funkciju dashboardLoader
