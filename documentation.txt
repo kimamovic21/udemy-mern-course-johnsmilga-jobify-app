@@ -856,3 +856,11 @@ Section 11: Dashboard and Login
 -u funkciji DashboardLayout(), iz funkcije useLoaderData() destruktuiramo varijablu const { user }
 -u jsx-u komponenti Outlet dodajemo prop context
 -u pro context proslijedujemo objekt i varijablu user 
+
+124. Logout
+-u komponentu DashboardLayout.jsx importujemo i kreiramo funkciju useNavigate iz React Router Dom paketa
+-vrijednost funkcije useNavigate pohranjujemo varijablu const navigate
+-u funkciju logoutUser() dodajemo funkciju navigate()
+-dodajemo metodu await customFetch.get()
+-importujemo funkciju toast
+-u funkciju logoutUser() dodajemo funkciju toast.success()
