@@ -877,3 +877,16 @@ Section 12: Jobs Pages
 -u jsx-u kreiramo vise komponenti FormRow
 -button elementu dodajemo prop disabled
 -u prop disabled proslijedujemo vrijednost varijable isSubmitting
+
+126. Select Input
+-u komponenti AddJob.jsx kreiramo div element sa klasom form-row za odabir tip posla
+-kreiramo select element
+-select elemntu dodajemo atribut defaultValue
+-u atribut defaultValue proslijedujemo vrijednost variable JOB_STATUS.PENDING
+-u select element dodajemo metodu Object.values(JOB_STATUS).map()
+-u folderu components kreiramo komponentu FormRowSelect.jsx
+-u komponenti FormRowSelect.jsx, funkciji FormRowSelect() dodajemo parametre destruktuirane prop name, labelText, list, defaultValue
+-u select element dodajemo metodu list.map()
+-u komponenti AddJob.jsx importujemo komponentu FormRowSelect.jsx
+-u jsx-u dodajemo kreiramo dvije komponente FormRowSelect 
+-komponentama FormRowSelect dodajemo prop labelText, name, defaultValue i list
