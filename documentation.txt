@@ -864,3 +864,16 @@ Section 11: Dashboard and Login
 -dodajemo metodu await customFetch.get()
 -importujemo funkciju toast
 -u funkciju logoutUser() dodajemo funkciju toast.success()
+
+
+Section 12: Jobs Pages
+
+125. Add Job Structure
+-importujemo komponentu Form, funkcije useNavigation, redirect, useOutletContext iz paketa React Router Dom
+-u komponenti AddJob.jsx destruktuiramo varijablu const { user } iz funkcije useOutletContext()
+-kreiramo varijable const navigation i const isSubmitting
+-importujemo komponentu Wrapper iz wrappers/DashboardFormPage.js fajla
+-importujemo komponentu FormRow.jsx
+-u jsx-u kreiramo vise komponenti FormRow
+-button elementu dodajemo prop disabled
+-u prop disabled proslijedujemo vrijednost varijable isSubmitting

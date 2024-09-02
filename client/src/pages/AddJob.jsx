@@ -1,6 +1,39 @@
+import { Form, useNavigation, redirect, useOutletContext } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { JOB_STATUS, JOB_TYPE } from '../../../utils/constants'
+import { FormRow } from '../components'
+import customFetch from '../utils/customFetch'
+import Wrapper from '../assets/wrappers/DashboardFormPage'
+
 const AddJob = () => {
+  const { user } = useOutletContext()
+  const navigation = useNavigation()
+  const isSubmitting = navigation.state === 'submitting'
+
   return (
-    <h2>AddJob</h2>
+    <Wrapper>
+      <Form method='post' className='form'>
+        <h4 className='form-title'>add job</h4>
+        <div className='form-center'>
+          <FormRow type='text' name='position' />
+          <FormRow type='text' name='company' />
+          <FormRow
+            type='text'
+            labelText='job location'
+            name='jobLocation'
+            defaultValue={user.location}
+          />
+
+          <button
+            type='submit'
+            className='btn btn-block form-btn '
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'submitting...' : 'submit'}
+          </button>
+        </div>
+      </Form>
+    </Wrapper>
   )
 }
 
