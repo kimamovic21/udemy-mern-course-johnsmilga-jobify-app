@@ -902,3 +902,5 @@ Section 12: Jobs Pages
 -dodajemo funkciju toast.success()
 -dodajemo funkciju return redirect()
 -u blok koda catch dodajemo funkciju toast.error()
+
+128. Add Job CSS (optional)
