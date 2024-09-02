@@ -920,3 +920,13 @@ Section 12: Jobs Pages
 -u komponentu AllJobs.jsx importujemo i kreiramo funkciju useLoaderData() iz pakete React Router Dom
 -u funkciji AllJobs() destruktuiramo varijablu const { data } iz funkcije useLoaderData()
 -importujemo i kreiramo komponente JobsContainer i SearchContainer
+
+130. All Jobs Context
+-importujemo i kreiramo funkciju createContext() iz React paketa
+-vrijednost funkcije createContext() pohranjujemo u varijablu const AllJobsContext
+-u jsx dodajemo komponentu AllJobsContext.Provider sa otvorenim i zatvorenim tagom
+-komponenti AllJobsContext.Provider dodajemo prop value 
+-u prop value proslijedujemo objekt i varijablu data
+-kreiramo i eksportujemo funkciju useAllJobsContext()
+-importujemo funkciju createContext
+-u funkciju useAllJobsContext dodajemo funkciju useContext(AllJobsContext)
