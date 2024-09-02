@@ -944,3 +944,5 @@ Section 12: Jobs Pages
 -u div element dodajemo metodu jobs.map()
 -u metodu map() dodajemo komponentu Job
 -komponenti Job dodajemo prop key i objekt prop {...job}
+
+132. Jobs Container CSS (optional)
