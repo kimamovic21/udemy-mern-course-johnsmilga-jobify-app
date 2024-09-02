@@ -904,3 +904,19 @@ Section 12: Jobs Pages
 -u blok koda catch dodajemo funkciju toast.error()
 
 128. Add Job CSS (optional)
+
+129. All Jobs Structure
+-u folderu components kreiramo komponente JobsContainer.jsx i SearchContainer.jsx
+-u index.js fajlu eksportujemo kreirane komponente
+-u komponentu AllJobs.jsx importujemo funkcije customFetch i toast
+-kreiramo i eksportujemo asinhronu funkciju loader()
+-funkciji loader dodajemo parametar destruktuirani prop request
+-kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu await customFetch.get()
+-vrijednost metode await customFetch() pohranjujemo u varijablu const { data }
+-u blok koda catch dodajemo funkciju toast.error()
+-u komponentu App.jsx importujemo funkciju loader kao allJobsLoader iz komponente AllJobs.jsx
+-u objekt rutu za komponentu AllJobs dodajemo key - value par loader i funkciju allJobsLoader
+-u komponentu AllJobs.jsx importujemo i kreiramo funkciju useLoaderData() iz pakete React Router Dom
+-u funkciji AllJobs() destruktuiramo varijablu const { data } iz funkcije useLoaderData()
+-importujemo i kreiramo komponente JobsContainer i SearchContainer
