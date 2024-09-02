@@ -890,3 +890,15 @@ Section 12: Jobs Pages
 -u komponenti AddJob.jsx importujemo komponentu FormRowSelect.jsx
 -u jsx-u dodajemo kreiramo dvije komponente FormRowSelect 
 -komponentama FormRowSelect dodajemo prop labelText, name, defaultValue i list
+
+127. Create Job Functionality
+-u komponenti AddJob.jsx kreiramo i eksportujemo asinhronu funkciju action()
+-funkciji action dodajemo parametar destruktuirani prop request
+-u komponentu App.jsx importujemo funkciju action kao addJobAction iz komponente AddJob.jsx
+-u objekt ruti za komponentu AddJob dodajemo key - value par action i funkciju addJobAction
+-u komponenti AddJob.jsx, u funkciji action() kreiramo varijable const formData i const data
+-dodajemo blokove koda try - catch
+-u blok koda try dodajemo metodu await customFetch.post()
+-dodajemo funkciju toast.success()
+-dodajemo funkciju return redirect()
+-u blok koda catch dodajemo funkciju toast.error()
