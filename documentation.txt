@@ -972,3 +972,5 @@ Section 12: Jobs Pages
 -u komponenti JobInfo.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/JobInfo.js fajla
 -funkciji JobInfo() dodajemo parametre destruktuirane prop icon i text
 -u jsx-u kreiramo komponentu Wrapper i span elemente
+
+134. Job Component CSS (optional)
