@@ -827,10 +827,10 @@ Section 11: Dashboard and Login
 -u blok koda try dodajemo metodu metodu await customFetch.post()
 -dodajemo funkciju toast.success()
 -dodajemo funkciju return redirect()
--u funkciji Login() kreiramo variable const navigation i const isSubmitting 
+-u funkciji Login() kreiramo varijable const navigation i const isSubmitting 
 -umjesto elementa form dodajemo komponentu Form
 -button elementu submit dodajemo atribut disabled
--u atribut disabled proslijedujemo vrijednost variable isSubmitting
+-u atribut disabled proslijedujemo vrijednost varijable isSubmitting
 -u button elementu dodajemo ternarni uslov isSubmitting
 
 121. UseActionData Hook (optional)
@@ -882,7 +882,7 @@ Section 12: Jobs Pages
 -u komponenti AddJob.jsx kreiramo div element sa klasom form-row za odabir tip posla
 -kreiramo select element
 -select elemntu dodajemo atribut defaultValue
--u atribut defaultValue proslijedujemo vrijednost variable JOB_STATUS.PENDING
+-u atribut defaultValue proslijedujemo vrijednost varijable JOB_STATUS.PENDING
 -u select element dodajemo metodu Object.values(JOB_STATUS).map()
 -u folderu components kreiramo komponentu FormRowSelect.jsx
 -u komponenti FormRowSelect.jsx, funkciji FormRowSelect() dodajemo parametre destruktuirane prop name, labelText, list, defaultValue
@@ -930,3 +930,17 @@ Section 12: Jobs Pages
 -kreiramo i eksportujemo funkciju useAllJobsContext()
 -importujemo funkciju createContext
 -u funkciju useAllJobsContext dodajemo funkciju useContext(AllJobsContext)
+
+131. Jobs Container JSX
+-u folderu components kreiramo komponentu Job.jsx
+-u komponentu JobsContainer.jsx importujemo komponenetu Job.jsx
+-importujemo i kreiramo funkciju useAllJobsContext()
+-vrijednost funkcije useAllJobsContext() pohranjujemo u destruktuiramo u varijablu const { data }
+-vrijednost varijable data destruktuiramo u varijablu const { jobs }
+-dodajemo uslov if (jobs.length === 0)
+-importujemo stiliziranu komponentu Wrapper iz wrappers/JobsContainer.js fajla
+-u uslov if dodajemo komponentu Wrapper i h2 element
+-u jsx dodajemo komponentu Wrapper i div element sa klasom jobs
+-u div element dodajemo metodu jobs.map()
+-u metodu map() dodajemo komponentu Job
+-komponenti Job dodajemo prop key i objekt prop {...job}
