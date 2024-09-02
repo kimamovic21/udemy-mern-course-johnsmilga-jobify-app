@@ -946,3 +946,29 @@ Section 12: Jobs Pages
 -komponenti Job dodajemo prop key i objekt prop {...job}
 
 132. Jobs Container CSS (optional)
+
+133. Job Component
+-u folderu components kreiramo komponentu JobInfo.jsx
+-u komponentu Job.jsx importujemo instancu day iz paketa Dayjs
+-importujemo instancu advancedFormat iz paketa dayjs/plugin/advancedFormat
+-importujemo stiliziranu komponentu Wrapper iz wrappers/Job.js fajla
+-importujemo komponentu JobInfo.jsx
+-importujemo React ikonice iz paketa React Icons
+-funkciji Job() dodajemo destruktuirane parametre 
+-kreiramo varijablu const date
+-u jsx-u kreiramo komponentu Wrapper i header elemente
+-u header elementu kreiramo div element sa klasom main-icon
+-kreiramo div element sa klasom info
+-izvan header elementa kreiramo div element sa klasom content
+-kreiramo div element sa klasom content-center
+-u div elementu kreiramo tri komponent JobInfo
+-komponentama JobInfo dodajemo prop icon i text 
+-div elementu za status posla dodajemo dinamicku klasu {`status ${jobStatus}`} 
+-dinamicka klasa predstavlja pozadinu za svaki od tri statusa posla
+-kreiramo footer element sa klasom actions
+-importujemo komponente Form i Link iz paketa React Router Dom
+-u footer elementu kreiramo komponente Form i Link
+-u komponenti Form kreiramo button Delete element 
+-u komponenti JobInfo.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/JobInfo.js fajla
+-funkciji JobInfo() dodajemo parametre destruktuirane prop icon i text
+-u jsx-u kreiramo komponentu Wrapper i span elemente
