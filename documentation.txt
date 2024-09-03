@@ -987,3 +987,16 @@ Section 12: Jobs Pages
 -u komponentu App.jsx importujemo funkciju action kao editJobAction
 -u komponenti EditJob.jsx importujemo i kreiramo funkciju useParams()
 -u funkciji EditJob(), vrijednost funkcije useParams() pohranjujemo u varijablu const params
+
+137. Edit Job Loader
+-u komponenti EditJob.jsx, u funkciji loader() kreiramo blokove koda try - catch
+-importujemo funkciju customFetch
+-u blok koda try dodajemo metodu await customFetch.get()
+-vrijednost metode await customFetch.get() pohranjujemo u destruktuiranu varijablu const { data }
+-dodajemo return data
+-importujemo funkciju toast
+-u blok koda catch dodajemo funkciju toast.error()
+-importujemo funkciju redirect i useLoaderData
+-dodajemo funkciju redirect()
+-u funkciji EditJob() kreiramo funkciju useLoaderData()
+-vrijednost funkcije useLoaderData() pohranjujemo u destruktuiranu varijablu const { job }
