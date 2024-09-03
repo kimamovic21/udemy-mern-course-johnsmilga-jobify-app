@@ -1075,3 +1075,9 @@ Section 13: Admin Page
 -komponentama StatItem dodajemo prop title, count, color, bcg i icon
 
 143. Admin CSS (optional)
+
+
+Section 14: Profile Page
+
+144. Avatar Images
+-otvorimo web stranicu https://generated.photos/faces/male
