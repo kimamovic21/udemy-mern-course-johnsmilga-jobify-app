@@ -45,6 +45,9 @@ Section 02: VS Code
 14. Install All Libraries (Optional)
 -u terminalu instaliramo potrebne pakete za projekt
 
+
+Section 03: React Router
+
 15. React Router - Info
 
 16. React Router - Initial Setup
@@ -1042,3 +1045,21 @@ Section 12: Jobs Pages
 -dodajemo funkciju toast.success()
 -u blok koda catch dodajemo funkciju toast.error()
 -nakon blokova koda try - catch dodajemo funkciju return redirect()
+
+
+Section 13: Admin Page
+
+141. Admin Page Setup
+-u komponentu Admin.jsx importujemo funkcije customFetch i toast
+-kreiramo i eksportujemo asinhronu funkciju action()
+-u funkciji action() kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu await customFetch.get()
+-vrijednost metode await customFetch.get() pohranjujemo u destruktuiranu varijablu const { data }
+-u blok koda catch dodajemo funkcije toast.error() i return redirect()
+-importujemo i kreiramo funkciju useLoaderData()
+-vrijednost funkcije useLoaderData() pohranjujemo u destruktuirane varijable const { users, jobs }
+-importujemo komponentu Wrapper iz wrappers/StatsContainer.js fajla
+-u komponentu App.jsx importujemo funkciju loader kao adminLoader
+-u objekt rutu za komponentu Admin dodajemo key - value par loader i funkciju adminLoader
+-u komponenti NavLinks.jsx destruktuiramo varijablu const { role }
+-dodajemo uslov if (role !== 'admin' && path === 'admin')
