@@ -1018,3 +1018,11 @@ Section 12: Jobs Pages
 -u jsx-u kreiramo button element sa atributima type, className i disabled
 -u atribut disabled proslijedujemo vrijednost varijable isSubmitting
 -u button element dodajemo ternarni uslov za varijablu isSubmitting
+
+139. Edit Job Action
+-u komponenti EditJob.jsx, funkciji action dodajemo destruktuirane parametre request i params
+-kreiramo varijable const formData i const data
+-kreiramo blokove koda try i catch
+-u bloku koda try dodajemo funkciju await customFetch.patch()
+-dodajemo funkcije toast.success() i return redirect()
+-u blok koda catch dodajemo funkciju toast.error()
