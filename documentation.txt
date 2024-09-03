@@ -1063,3 +1063,13 @@ Section 13: Admin Page
 -u objekt rutu za komponentu Admin dodajemo key - value par loader i funkciju adminLoader
 -u komponenti NavLinks.jsx destruktuiramo varijablu const { role }
 -dodajemo uslov if (role !== 'admin' && path === 'admin')
+
+142. Admin Page Complete
+-u folderu components kreiramo komponentu StatItem.jsx
+-u komponentu StatItem.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/StatItem.js fajla
+-funkciji StatItem() dodajemo parametre destruktuirane prop count, title, icon, color i bcg
+-u jsx-u komponenti Wrapper dodajemo prop color i bcg
+-u index.js fajlu eksportujemo komponentu StatItem kao default
+-u komponentu Admin.jsx importujemo komponentu StatItem.jsx
+-u jsx-u, u komponenti Wrapper kreiramo dvije komponente StatItem
+-komponentama StatItem dodajemo prop title, count, color, bcg i icon
