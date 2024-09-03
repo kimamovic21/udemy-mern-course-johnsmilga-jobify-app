@@ -1026,3 +1026,19 @@ Section 12: Jobs Pages
 -u bloku koda try dodajemo funkciju await customFetch.patch()
 -dodajemo funkcije toast.success() i return redirect()
 -u blok koda catch dodajemo funkciju toast.error()
+
+140. Delete Job
+-u komponenti Job.jsx, u komponenti Form u kojoj se nalazi button element za brisanje dodajemo prop method i action
+-u prop method dodajemo opciju post
+-u prop action dodajemo dinamicku rutu u koju proslijedujemo id posla kojeg zelimo obrisati
+-u komponenti DeleteJob.jsx kreiramo i eksportujemo asinhronu funkciju action()
+-funkciji action() dodajemo parametar destruktuirani prop params
+-u komponentu App.jsx importujemo funkciju action kao deleteJobAction iz komponente DeleteJob.jsx
+-kreiramo objekt rutu za komponentu DeleteJob
+-dodajemo key - value par action i funkciju deleteJobAction
+-u komponenti DeleteJob.jsx, u funkciji action() kreiramo blokove koda try - catch
+-importujemo funkcije redirect, toast i customFetch
+-u blok koda try dodajemo metodu await customFetch.delete()
+-dodajemo funkciju toast.success()
+-u blok koda catch dodajemo funkciju toast.error()
+-nakon blokova koda try - catch dodajemo funkciju return redirect()
