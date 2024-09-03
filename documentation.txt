@@ -980,3 +980,10 @@ Section 12: Jobs Pages
 -kreiramo objekt rutu za komponentu EditJob
 -u komponenti Job.jsx komponenti Link dodajemo prop to
 -u prop to dodajemo dinamicku rutu za uredivanje posla na osnovu parametra id
+
+136. Route Params
+-u komponenti EditJob.jsx kreiramo i eksportujemo funkcije action() i loader()
+-u komponentu App.jsx importujemo funkciju loader kao editJobLoader 
+-u komponentu App.jsx importujemo funkciju action kao editJobAction
+-u komponenti EditJob.jsx importujemo i kreiramo funkciju useParams()
+-u funkciji EditJob(), vrijednost funkcije useParams() pohranjujemo u varijablu const params
