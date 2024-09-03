@@ -1073,3 +1073,5 @@ Section 13: Admin Page
 -u komponentu Admin.jsx importujemo komponentu StatItem.jsx
 -u jsx-u, u komponenti Wrapper kreiramo dvije komponente StatItem
 -komponentama StatItem dodajemo prop title, count, color, bcg i icon
+
+143. Admin CSS (optional)
