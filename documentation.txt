@@ -163,7 +163,7 @@ Section 08: Dashboard Page
 -u folderu components kreiramo tri nove komponente BigSidebar.jsx, SmallSidebar.jsx i Navbar.jsx
 -u svaku komponentu importujemo odgovarajucu stiliziranu komponentu Wrapper
 -u index.js fajlu eksportujemo kreirane rute
--u komponenetu DashboardLayout.jsx importujemo kreirane komponente
+-u komponentu DashboardLayout.jsx importujemo kreirane komponente
 
 36. Dashboard CSS (optional)
 -u folderu wrappers, u Dashboard.js fajlu klasama dodajemo CSS stil
@@ -933,7 +933,7 @@ Section 12: Jobs Pages
 
 131. Jobs Container JSX
 -u folderu components kreiramo komponentu Job.jsx
--u komponentu JobsContainer.jsx importujemo komponenetu Job.jsx
+-u komponentu JobsContainer.jsx importujemo komponentu Job.jsx
 -importujemo i kreiramo funkciju useAllJobsContext()
 -vrijednost funkcije useAllJobsContext() pohranjujemo u destruktuiramo u varijablu const { data }
 -vrijednost varijable data destruktuiramo u varijablu const { jobs }
@@ -974,3 +974,9 @@ Section 12: Jobs Pages
 -u jsx-u kreiramo komponentu Wrapper i span elemente
 
 134. Job Component CSS (optional)
+
+135. Edit Job - Setup
+-u komponentu App.jsx importujemo komponentu EditJob.jsx
+-kreiramo objekt rutu za komponentu EditJob
+-u komponenti Job.jsx komponenti Link dodajemo prop to
+-u prop to dodajemo dinamicku rutu za uredivanje posla na osnovu parametra id
