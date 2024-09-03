@@ -1081,3 +1081,15 @@ Section 14: Profile Page
 
 144. Avatar Images
 -otvorimo web stranicu https://generated.photos/faces/male
+
+145. Public Folder
+-u root nivou foldera kreiramo folder public
+-u folderu public kreiramo folder uploads
+-u server.js fajl importujemo instancu path i varijablu dirname iz paketa path
+-importujemo instancu express-async-errors
+-importujemo funkciju fileURLToPath iz url paketa
+-kreiramo varijablu const __dirname
+-kreiramo metodu app.use() za folder public
+-u folderu public dodajemo dvije slike kerim.png i john.png
+-u pretrazivacu otvorimo rutu http://localhost:5100/kerim.png 
+-otvorimo rutu http://localhost:5100/john.png
