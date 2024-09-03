@@ -264,7 +264,7 @@ Section 08: Dashboard Page
 -destruktuiramo varijable const { isDarkTheme, toggleDarkTheme }
 -u jsx-u komponenti Wrapper dodajemo prop onClick
 -u prop onClick proslijedujemo funkciju toggleDarkTheme
--u jsx-u dodajemo ternani uslov za isDarkTheme za pojavljivanje React ikonica
+-u jsx-u dodajemo ternarni uslov za isDarkTheme za pojavljivanje React ikonica
 -u komponentu Navbar.jsx importujemo komponentu ThemeToggle.jsx
 
 51. Theme Toggle CSS (optional)
@@ -312,7 +312,7 @@ Section 09: Server
 -u terminal ukucamo komandu node server da vidimo vrijednost varijabli 
 
 57. Install Server Packages
--u terminalu instaliramo potrebne pakate za server dio projekta
+-u terminalu instaliramo potrebne pakete za server dio projekta
 -u package.json fajlu u objektu scripts dodajemo komandu "setup-project": "npm i && cd client && npm i"
 -u terminal ukucamo komandu npm run setup-project sa kojom u istom vrijeme instaliramo pakete za client i server dio
 
@@ -1000,3 +1000,21 @@ Section 12: Jobs Pages
 -dodajemo funkciju redirect()
 -u funkciji EditJob() kreiramo funkciju useLoaderData()
 -vrijednost funkcije useLoaderData() pohranjujemo u destruktuiranu varijablu const { job }
+
+138. Edit Job JSX
+-u komponentu EditJob.jsx importujemo komponentu Wrapper iz wrappers/DashboardFormPage.js fajla
+-u jsx-u kreiramo komponentu Wrapper sa otvorenim i zatvorenim tagom
+-importujemo komponentu Form iz paketa React Router Dom
+-importujemo komponente FormRow.jsx i FormRowSelect.jsx
+-u jsx-u kreiramo tri komponente FormRow.jsx 
+-komponentama FormRow dodajemo prop type, name i defaultValue
+-u jsx-u kreiramo dvije komponente FormRowSelect
+-komponentama FormRowSelect dodajemo prop name, labelText, defaultValue i list
+-u prop list dodajemo funkcije Object.values()
+-importujemo varijable JOB_STATUS i JOB_TYPE iz constants.js fajla
+-importujemo i kreiramo funkciju useNavigation()
+-vrijednost funkcije useNavigation() pohranjujemo u varijablu const navigation
+-kreiramo varijablu const isSubmitting
+-u jsx-u kreiramo button element sa atributima type, className i disabled
+-u atribut disabled proslijedujemo vrijednost varijable isSubmitting
+-u button element dodajemo ternarni uslov za varijablu isSubmitting
