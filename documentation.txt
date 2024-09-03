@@ -1093,3 +1093,6 @@ Section 14: Profile Page
 -u folderu public dodajemo dvije slike kerim.png i john.png
 -u pretrazivacu otvorimo rutu http://localhost:5100/kerim.png 
 -otvorimo rutu http://localhost:5100/john.png
+
+146. User Schema Update
+-u UserModel.js fajl dodajemo opcije avatar i avatarPublicId kao String
