@@ -1120,3 +1120,18 @@ Section 14: Profile Page
 -kreiramo button element sa atributima className, type i disabled
 -u atribut disabled proslijedujemo vrijednost varijable isSubmitting
 -u button element dodajemo ternarni uslov za varijablu isSubmitting
+
+148. Profile Action
+-u komponentu Profile.jsx importujemo funkciju customFetch
+-kreiramo i eksportujemo asinhronu funkciju action()
+-funkciji action() dodajemo parametar destruktuirani prop request
+-u komponentu App.jsx importujemo funkciju action kao profileAction
+-u objekt rutu za komponentu Profile dodajemo key - value par action i funkciju profileAction
+-u komponenti Profile.jsx, u funkciji action() kreiramo varijablu const formData
+-kreiramo varijablu const file
+-dodajemo uslov if (file && file.size > 500000) 
+-importujemo funkciju toast
+-u uslov if dodajemo funkciju toast.error()
+-u blok koda try dodajemo metodu await customFetch.patch()
+-dodajemo funkciju toast.success()
+-u blok koda catch dodajemo funkciju toast.error()
