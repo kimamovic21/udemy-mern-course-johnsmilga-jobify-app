@@ -1146,3 +1146,10 @@ Section 14: Profile Page
 -varijablu upload eksportujemo kao default
 -u userRouter.js fajl importujemo funkciju upload
 -u rutu router.patch() dodajemo funkciju upload.single('avatar')
+
+150. Cloudinary
+-otvorimo web stranicu https://cloudinary.com/
+-u fajlovima .env i .env.example kreiramo varijable CLOUD_NAME, CLOUD_API_KEY i CLOUD_API_SECRET
+-u server.js fajlu importujemo instancu cloudinary
+-kreiramo metodu cloudinary.config()
+-u funkciju config() dodajemo konfiguracioni objekt sa vrijednostima cloud_name, api_key i api_secret
