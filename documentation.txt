@@ -1153,3 +1153,16 @@ Section 14: Profile Page
 -u server.js fajlu importujemo instancu cloudinary
 -kreiramo metodu cloudinary.config()
 -u funkciju config() dodajemo konfiguracioni objekt sa vrijednostima cloud_name, api_key i api_secret
+
+151. Update User Functionality
+-u userController.js fajl importujemo instancu cloudinary
+-importujemo funkciju promises kao fs
+-u funkciju updateUser() dodajemo uslov if (req.file)
+-u uslov if dodajemo metodu await cloudinary.v2.uploader.upload()
+-vrijednost metode await cloudinary pohranjujemo u varijablu const response
+-dodajemo metodu await fs.unlink()
+-dodajemo metode newUser.avatar i newUser.avatarPublicId
+-varijablu const obj preimenujemo u const newUser
+-kreiramo varijablu const updatedUser
+-dodajemo uslov if (req.file && updatedUser.avatarPublicId)
+-u uslov if dodajemo metodu cloudinary.v2.uploader.destroy()
