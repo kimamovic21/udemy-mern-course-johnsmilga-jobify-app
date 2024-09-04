@@ -95,7 +95,7 @@ Section 04: Landing Page
 
 24. Landing Page
 -u komponentu Landing dodajemo slike iz foldera images
--kreiramo stilizirano varijablu komponentu const StyledWrapper
+-kreiramo stiliziranu varijablu komponentu const StyledWrapper
 -u funkciju Landing() dodajemo komponentu StyledWrapper sa otvorenim i zatvorenim tagom
 
 25. Landing Page - CSS (Optional)
@@ -145,7 +145,7 @@ Section 06: Register Page
 Section 07: LoginPage
 
 32. LoginPage
--u komponentu Login.jsx importujemo stilizirano komponentu Wrapper iz RegisterAndLoginPage.js fajla
+-u komponentu Login.jsx importujemo stiliziranu komponentu Wrapper iz RegisterAndLoginPage.js fajla
 -importujemo komponentu FormRow i sliku Logo
 -u jsx-u dodajemo komponente FormRow
 -komponentama FormRow dodajemo vrijednosti za prop
@@ -1096,3 +1096,27 @@ Section 14: Profile Page
 
 146. User Schema Update
 -u UserModel.js fajl dodajemo opcije avatar i avatarPublicId kao String
+
+147. Profile Page Structure
+-u komponentu Profile.jsx importujemo i kreiramo funkciju useOutletContext iz paketa React Router Dom
+-vrijednost funkcije useOutletContext() pohranjujemo u destruktuiranu  varijablu const { user }
+-iz varijable user destruktuiramo varijable const { name, lastName, email, location } 
+-importujemo i kreiramo funkciju useNavigation()
+-vrijednost funkcije useNavigation() pohranjujemo u varijablu const navigation
+-kreiramo varijablu const isSubmitting
+-importujemo komponentu Form
+-importujemo stiliziranu komponentu Wrapper iz wrappers/DashboardFormPage.js fajla
+-u jsx-u kreiramo komponentu Wrapper
+-u komponenti Wrapper kreiramo komponentu Form
+-komponenti Form dodajemo prop method, className i encType
+-kreiramo h4 element sa klasom form-title
+-kreiramo div element sa klasom form-center
+-importujemo komponentu FormRow.jsx
+-u div elementu sa klasom form-center kreiramo cetiri FormRow komponente
+-komponentama FormRow dodajemo prop type, name, labelText i defaultValue
+-kreiramo div element sa klasom form-row
+-u div elementu sa klasom form-row kreiramo label element sa atributima htmlFor i className
+-kreiramo input element za sliku sa atributima type, id, name, className i accept
+-kreiramo button element sa atributima className, type i disabled
+-u atribut disabled proslijedujemo vrijednost varijable isSubmitting
+-u button element dodajemo ternarni uslov za varijablu isSubmitting
