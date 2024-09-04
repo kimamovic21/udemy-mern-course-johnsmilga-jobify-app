@@ -1135,3 +1135,14 @@ Section 14: Profile Page
 -u blok koda try dodajemo metodu await customFetch.patch()
 -dodajemo funkciju toast.success()
 -u blok koda catch dodajemo funkciju toast.error()
+
+149. Setup Multer
+-u folderu middleware kreiramo multerMiddleware.js fajl
+-u multerMiddleware.js fajl importujemo multer instancu
+-kreiramo metodu multer.diskStorage()
+-vrijednost metode multer.diskStorage() pohranjujemo u varijablu const storage
+-u funkciju diskStorage() dodajemo dva konfiguraciona objeka destination i filename
+-kreiramo varijablu const upload
+-varijablu upload eksportujemo kao default
+-u userRouter.js fajl importujemo funkciju upload
+-u rutu router.patch() dodajemo funkciju upload.single('avatar')
