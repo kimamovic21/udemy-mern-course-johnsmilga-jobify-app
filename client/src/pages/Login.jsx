@@ -1,26 +1,24 @@
-import { Link, Form, redirect, useNavigation } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import { FormRow, Logo } from '../components';
-import customFetch from '../utils/customFetch';
-import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
+import { Link, Form, redirect } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { FormRow, Logo, SubmitBtn } from '../components'
+import customFetch from '../utils/customFetch'
+import Wrapper from '../assets/wrappers/RegisterAndLoginPage'
 
 export const action = async ({ request }) => {
-  const formData = await request.formData();
-  const data = Object.fromEntries(formData);
+  const formData = await request.formData()
+  const data = Object.fromEntries(formData)
+
   try {
-    await customFetch.post('/auth/login', data);
-    toast.success('Login successful!');
-    return redirect('/dashboard');
+    await customFetch.post('/auth/login', data)
+    toast.success('Login successful!')
+    return redirect('/dashboard')
   } catch (error) {
-    toast.error(error?.response?.data?.msg);
-    return error;
+    toast.error(error?.response?.data?.msg)
+    return error
   }
-};
+}
 
 const Login = () => {
-  const navigation = useNavigation();
-  const isSubmitting = navigation.state === 'submitting';
-
   return (
     <Wrapper>
       <Form method='post' className='form'>
@@ -29,9 +27,8 @@ const Login = () => {
         <FormRow type='email' name='email' defaultValue='kerim@email.com' />
         <FormRow type='password' name='password' defaultValue='12345678' />
         
-        <button type='submit' className='btn btn-block' disabled={isSubmitting}>
-          {isSubmitting ? 'submitting...' : 'submit'}
-        </button>
+        <SubmitBtn />
+
         <button type='button' className='btn btn-block'>
           explore the app
         </button>
@@ -44,7 +41,7 @@ const Login = () => {
         </p>
       </Form>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

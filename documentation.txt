@@ -1166,3 +1166,25 @@ Section 14: Profile Page
 -kreiramo varijablu const updatedUser
 -dodajemo uslov if (req.file && updatedUser.avatarPublicId)
 -u uslov if dodajemo metodu cloudinary.v2.uploader.destroy()
+
+152. Submit Button Component
+-u folderu components kreiramo komponentu SubmitBtn.jsx
+-u komponentu SubmitBtn.jsx importujemo i kreiramo funkciju useNavigation
+-vrijednost funkcije useNavigation pohranjujemo u varijablu const navigation
+-funkciji SubmitBtn() dodajemo parametar destruktuirani prop formBtn
+-u jsx-u kreiramo button element sa atributima type, className i disabled
+-u atribut className dodajemo dinamicku klasu
+-u index.js fajlu eksportujemo komponentu SubmitBtn.jsx
+-u komponentu AddJob.jsx importujemo komponentu SubmitBtn.jsx
+-u jsx-u kreiramo komponentu SubmitBtn 
+-komponenti SubmitBtn dodajemo prop formBtn
+-u komponentu EditJob.jsx importujemo komponentu SubmitBtn
+-u jsx-u kreiramo komponentu SubmitBtn
+-komponenti SubmitBtn dodajemo prop formBtn
+-u komponentu Profile.jsx importujemo komponentu SubmitBtn.jsx
+-u jsx-u kreiramo komponentu SubmitBtn
+-komponenti SubmitBtn dodajemo prop formBtn
+-u komponentu Login.jsx importujemo komponentu SubmitBtn.jsx
+-u jsx-u kreiramo komponentu SubmitBtn
+-u komponentu Register.jsx importujemo komponentu SubmitBtn.jsx
+-u jsx-u kreiramo komponentu SubmitBtn
