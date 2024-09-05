@@ -1213,3 +1213,7 @@ Section 14: Profile Page
 -u metode za router dodajemo funkciju checkForTestUser
 -u userRouter.js fajl importujemo funkciju checkForTestUser
 -u metodu router.patch() dodajemo funkciju checkForTestUser
+
+155. Mockaroo
+-otvorimo web stranicu https://www.mockaroo.com/
+-u folderu utils kreiramo mockData.json fajl
