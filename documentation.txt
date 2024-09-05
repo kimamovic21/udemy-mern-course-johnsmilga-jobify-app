@@ -1200,3 +1200,16 @@ Section 14: Profile Page
 -u blok koda catch dodajemo funkciju toast.error()
 -button elementu explore the app dodajemo dogadaj onClick
 -u dogadaj onClick proslijedujemo funkciju loginDemoUser
+
+154. Restrict Access to Test User
+-u authMiddleware.js fajlu, u funkciji authenticateUser() kreiramo varijablu const testUser
+-u metodu req.user dodajemo varijablu testUser
+-kreiramo i eksportujemo funkciju checkForTestUser() sa parametrima req, res i next
+-dodajemo uslov if (req.user.testUser)
+-importujemo funkciju BadRequestError
+-u uslov if (req.user.testUser) dodajemo funkciju throw new BadRequestError()
+-dodajemo funkciju next()
+-u jobRouter.js fajl importujemo funkciju checkForTestUser
+-u metode za router dodajemo funkciju checkForTestUser
+-u userRouter.js fajl importujemo funkciju checkForTestUser
+-u metodu router.patch() dodajemo funkciju checkForTestUser
