@@ -1217,3 +1217,16 @@ Section 14: Profile Page
 155. Mockaroo
 -otvorimo web stranicu https://www.mockaroo.com/
 -u folderu utils kreiramo mockData.json fajl
+
+156. Populate DB
+-kreiramo populate.js fajl
+-u populate.js fajl importujemo funkciju readFile 
+-importujemo instance mongoose i dotenv
+-dodajemo metodu dotenv.config()
+-importujemo modelete Job i User
+-kreiramo blokove koda try i catch
+-u blok koda try dodajemo metodu await mongoose.connect()
+-kreiramo varijable const user, const jsonJobs i const jobs
+-dodajemo metode await Job.deleteMany() i await Job.create(jobs)
+-u terminalu ukucamo komandu node populate za korisnike test i kerim
+-sa ovom komandom dodajemo po 100 kreiranih poslova za svakog korisnika
