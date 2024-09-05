@@ -1252,3 +1252,16 @@ Section 15: Stats Page
 -dodajemo metodu stats.reduce() sa dva parametra acc i curr
 -destruktuiramo varijable const { _id: title, count } iz varijable curr
 -u objektu defaultStats dodajemo za vrijednosti pending, interview i declined vrijednost 0 ako nema rezultata za poslove
+-u Postman-u testiramo rutu Show Stats 
+
+159. Group by Monthly Applications
+-importujemo instancu day iz paketa Dayjs
+-u jobController.js fajl, u funkciju showStats() dodajemo metodu Job.aggregate([ ... ])
+-vrijednost metode Job.aggregate() pohranjujemo u varijablu let monthlyApplications
+-u niz dodajemo metodu { $match: { createdBy: ... } }
+-dodajemo jos jedan objekt { $group: { ... }}
+-dodajemo metodu  monthlyApplications.map()
+-u metodi map() destruktuiramo varijable const { _id: { year, month }, count } iz varijable item
+-kreiramo varijablu const date
+-nizu monthlyApplications nakon metode map() dodajemo metodu reverse()
+-u Postman-u testiramo rutu Show Stats 

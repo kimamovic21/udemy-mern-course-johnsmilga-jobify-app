@@ -5347,7 +5347,8 @@ export const showStats = async (req, res) => {
 
 [MongoDB Docs](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
 
-The MongoDB aggregation pipeline is like a factory line for data. Data enters, it goes through different stages like cleaning, sorting, or grouping, and comes out at the end changed in some way. It's a way to process data inside MongoDB.
+The MongoDB aggregation pipeline is like a factory line for data. Data enters, it goes through different stages like 
+cleaning, sorting, or grouping, and comes out at the end changed in some way. It's a way to process data inside MongoDB.
 
 jobController.js
 
@@ -5408,11 +5409,17 @@ let stats = await Job.aggregate([
 ]);
 ```
 
-let stats = await Job.aggregate([ ... ]); This line says we're going to perform an aggregation operation on the Job collection in MongoDB and save the result in a variable called stats. The await keyword is used to wait for the operation to finish before continuing, as the operation is asynchronous (i.e., it runs in the background).
+let stats = await Job.aggregate([ ... ]); This line says we're going to perform an aggregation operation on the Job collection in MongoDB 
+and save the result in a variable called stats. The await keyword is used to wait for the operation to finish before continuing, as the 
+operation is asynchronous (i.e., it runs in the background).
 
-{ $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } } This is the first stage of the pipeline. It filters the jobs so that only the ones created by the user specified by req.user.userId are passed to the next stage. The new mongoose.Types.ObjectId(req.user.userId) part converts req.user.userId into an ObjectId (which is the format MongoDB uses for ids).
+{ $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } } This is the first stage of the pipeline. It filters the jobs so that 
+only the ones created by the user specified by req.user.userId are passed to the next stage. The new mongoose.Types.ObjectId(req.user.userId) 
+part converts req.user.userId into an ObjectId (which is the format MongoDB uses for ids).
 
-{ $group: { _id: '$jobStatus', count: { $sum: 1 } } } This is the second stage of the pipeline. It groups the remaining jobs by their status (the jobStatus field). For each group, it calculates the count of jobs by adding 1 for each job ({ $sum: 1 }), and stores this in a field called count.
+{ $group: { _id: '$jobStatus', count: { $sum: 1 } } } This is the second stage of the pipeline. It groups the remaining jobs by their 
+status (the jobStatus field). For each group, it calculates the count of jobs by adding 1 for each job ({ $sum: 1 }), and stores this 
+in a field called count.
 
 ```js
 let monthlyApplications = await Job.aggregate([
