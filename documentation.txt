@@ -1230,3 +1230,15 @@ Section 14: Profile Page
 -dodajemo metode await Job.deleteMany() i await Job.create(jobs)
 -u terminalu ukucamo komandu node populate za korisnike test i kerim
 -sa ovom komandom dodajemo po 100 kreiranih poslova za svakog korisnika
+
+
+Section 15: Stats Page
+
+157. Stats Route Setup
+-u jobController.js fajlu kreiramo i eksportujemo asinhronu funkciju showStats()
+-u jobRouter.js fajl importujemo funkciju showStats
+-kreiramo rutu router.route() za funkciju showStats
+-u Postman-u kreiramo i testiramo rutu Show Stats
+-u jobController.js fajlu, u funkciji showStats() kreiramo varijablu objekt const defaultStats
+-kreiramo varijablu let monthlyApplications
+-dodajemo metodu res.status(StatusCodes.OK)
