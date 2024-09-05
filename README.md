@@ -5435,17 +5435,25 @@ let monthlyApplications = await Job.aggregate([
 ]);
 ```
 
-let monthlyApplications = await Job.aggregate([ ... ]); This line indicates that an aggregation operation will be performed on the Job collection in MongoDB. The result will be stored in the variable monthlyApplications. The await keyword ensures that the code waits for this operation to complete before proceeding, as it is an asynchronous operation.
+let monthlyApplications = await Job.aggregate([ ... ]); This line indicates that an aggregation operation will be performed on the 
+Job collection in MongoDB. The result will be stored in the variable monthlyApplications. The await keyword ensures that the code 
+waits for this operation to complete before proceeding, as it is an asynchronous operation.
 
-{ $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } } This is the first stage of the pipeline. It filters the jobs to only those created by the user identified by req.user.userId.
+{ $match: { createdBy: new mongoose.Types.ObjectId(req.user.userId) } } This is the first stage of the pipeline. It filters the 
+jobs to only those created by the user identified by req.user.userId.
 
-{ $group: { _id: { year: { $year: '$createdAt' }, month: { $month: '$createdAt' } }, count: { $sum: 1 } } } This is the second stage of the pipeline. It groups the remaining jobs based on the year and month when they were created. For each group, it calculates the count of jobs by adding 1 for each job in the group.
+{ $group: { _id: { year: { $year: '$createdAt' }, month: { $month: '$createdAt' } }, count: { $sum: 1 } } } This is the second stage 
+of the pipeline. It groups the remaining jobs based on the year and month when they were created. For each group, it calculates the 
+count of jobs by adding 1 for each job in the group.
 
-{ $sort: { '\_id.year': -1, '\_id.month': -1 } } This is the third stage of the pipeline. It sorts the groups by year and month in descending order. The -1 indicates descending order. So it starts with the most recent year and month.
+{ $sort: { '\_id.year': -1, '\_id.month': -1 } } This is the third stage of the pipeline. It sorts the groups by year and month in 
+descending order. The -1 indicates descending order. So it starts with the most recent year and month.
 
-{ $limit: 6 } This is the fourth and last stage of the pipeline. It limits the output to the top 6 groups, after sorting. This is effectively getting the job count for the last 6 months.
+{ $limit: 6 } This is the fourth and last stage of the pipeline. It limits the output to the top 6 groups, after sorting. 
+This is effectively getting the job count for the last 6 months.
 
-So, monthlyApplications will be an array with up to 6 elements, each representing the number of jobs created by the user in a specific month and year. The array will be sorted by year and month, starting with the most recent.
+So, monthlyApplications will be an array with up to 6 elements, each representing the number of jobs created by the user in a 
+specific month and year. The array will be sorted by year and month, starting with the most recent.
 
 #### Stats - Front-End Setup
 

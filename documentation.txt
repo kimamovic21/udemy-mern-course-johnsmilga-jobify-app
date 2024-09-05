@@ -1265,3 +1265,23 @@ Section 15: Stats Page
 -kreiramo varijablu const date
 -nizu monthlyApplications nakon metode map() dodajemo metodu reverse()
 -u Postman-u testiramo rutu Show Stats 
+
+160. Stats Page Setup
+-u folderu components kreiramo komponente AreaChart.jsx, BarChart.jsx, ChartsContainer.jsx i StatsContainer.jsx
+-u index.js fajlu eksportujemo komponente ChartsContainer.jsx i StatsContainer.jsx kao default
+-u komponenti Stats.jsx kreiramo i eksportujemo asinhronu funkciju loader()
+-importujemo funkciju customFetch
+-u komponentu App.jsx importujemo funkciju loader kao statsLoader
+-u objekt rutu za komponentu Stats dodajemo key - value par loader i funkciju statsLoader
+-u komponenti Stats.jsx, u funkciji loader() dodajemo metodu await customFetch.get()
+-vrijednost metode await customFetch.get() pohranjujemo u destruktuiranu varijablu const { data }
+-dodajemo return data
+-u blok koda catch dodajemo return error
+-importujemo i kreiramo funkciju useLoaderData()
+-vrijednost funkcije useLoaderData() pohranjujemo u destruktuirane varijable const { defaultStats, monthlyApplications }
+-importujemo komponente StatsContainer.jsx i ChartsContainer.jsx
+-u jsx-u komponenti StatsContainer dodajemo prop defaultStats
+-u prop defaultStats proslijedujemo vrijednost variable defaultStats
+-dodajemo uslov {monthlyApplications?.length > 1 && ()} za prikazivanje komponente ChartsContainer
+-komponenti ChartsContainer dodajemo prop data
+-u prop data proslijedujemo vrijednost varijable monthlyApplications
