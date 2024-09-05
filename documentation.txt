@@ -1141,7 +1141,7 @@ Section 14: Profile Page
 -u multerMiddleware.js fajl importujemo multer instancu
 -kreiramo metodu multer.diskStorage()
 -vrijednost metode multer.diskStorage() pohranjujemo u varijablu const storage
--u funkciju diskStorage() dodajemo dva konfiguraciona objeka destination i filename
+-u funkciju diskStorage() dodajemo dva konfiguraciona objekta destination i filename
 -kreiramo varijablu const upload
 -varijablu upload eksportujemo kao default
 -u userRouter.js fajl importujemo funkciju upload
@@ -1188,3 +1188,15 @@ Section 14: Profile Page
 -u jsx-u kreiramo komponentu SubmitBtn
 -u komponentu Register.jsx importujemo komponentu SubmitBtn.jsx
 -u jsx-u kreiramo komponentu SubmitBtn
+
+153. Create Test User
+-u komponentu Login.jsx importujemo i kreiramo funkciju useNavigate iz React Router Dom paketa
+-vrijednost funkcije useNavigate() pohranjujemo u varijablu const navigate
+-kreiramo asinhronu funkciju loginDemoUser
+-u funkciji loginDemoUser() kreiramo objekt const data
+-kreiramo blokove koda try - catch
+-u blok koda try dodajemo metodu await customFetch.post()
+-dodajemo funkcije toast.success() i navigate()
+-u blok koda catch dodajemo funkciju toast.error()
+-button elementu explore the app dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju loginDemoUser
