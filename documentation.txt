@@ -1242,3 +1242,13 @@ Section 15: Stats Page
 -u jobController.js fajlu, u funkciji showStats() kreiramo varijablu objekt const defaultStats
 -kreiramo varijablu let monthlyApplications
 -dodajemo metodu res.status(StatusCodes.OK)
+
+158. Group by Job Status
+-u jobController.js fajl importujemo instancu mongoose
+-u funkciju showStats() dodajemo metodu Job.aggregate()
+-vrijednost metode Job.aggregate() pohranjujemo u varijablu let stats
+-u funkciju aggregate() dodajemo niz []
+-u niz [] dodajemo objekte $match i $group
+-dodajemo metodu stats.reduce() sa dva parametra acc i curr
+-destruktuiramo varijable const { _id: title, count } iz varijable curr
+-u objektu defaultStats dodajemo za vrijednosti pending, interview i declined vrijednost 0 ako nema rezultata za poslove
