@@ -1310,3 +1310,30 @@ Section 15: Stats Page
 -u button element dodajemo ternarni uslov za varijablu barChart
 -dodajemo uslov ternarni uslov za varijablu barChart
 -komponentama AreaChart i BarChart dodajemo prop data
+
+163. Charts
+-otvorimo web stranicu https://recharts.org/en-US/
+-u komponentu AreaChart.jsx importujemo komponente iz paketa Recharts
+-funkciji AreaChart() dodajemo parametar destruktuirani prop data
+-u jsx-u kreiramo komponetu ResponsiveContainer kao roditelj element za ostale komponente iz paketa Recharts
+-komponenti ResponsiveContainer dodajemo prop width i height
+-u komponenti ResponsiveContainer kreiramo komponentu AreaChart
+-komponenti AreaChart dodajemo prop data i margin
+-u komponenti AreaChart kreiramo komponente CartesianGrid, XAxis,YAxis, Tooltip i Area
+-komponenti CartesianGrid dodajemo prop strokeDasharray
+-komponenti XAxis dodajemo prop dataKey
+-komponenti YAxis dodajemo prop allowDecimals
+-komponenti Area dodajemo prop type, dataKey, stroke i fill
+-preimenujemo ime funkcije AreaChart() u AreaChartComponent()
+-u komponentu BarChart.jsx importujemo komponente iz paketa Recharts
+-u komponenti BarChart.jsx preimenujemo funkciju BarChart() u BarChartComponent
+-funkciji BarChartComponent() dodajemo parametar destruktuirani prop data
+-u jsx-u kreiramo komponentu ResponsiveContainer kao roditelj element za ostale komponente iz paketa Recharts
+-komponenti ResponsiveContainer dodajemo prop width i height
+-u komponenti ResponsiveContainer kreiramo komponentu BarChart
+-komponenti BarChart dodajemo prop data i margin
+-u komponenti BarChart kreiramo komponente CartesianGrid, XAxis, YAxis, Tooltip i Bar
+-komponenti CartesianGrid dodajemo prop strokeDasharray
+-komponenti XAxis dodajemo prop dataKey
+-komponenti YAxis dodajemo prop allowDecimals
+-komponenti Bar dodajemo dataKey, fill i barSize
