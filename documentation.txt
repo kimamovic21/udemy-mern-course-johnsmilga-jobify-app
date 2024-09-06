@@ -1346,3 +1346,13 @@ Section 16: All Jobs Page
 165. Query Params
 -u jobController.js fajlu, u metodu Job.find() dodana opcija position
 -u Postman-u testiramo rutu Get All Jobs npr parametrom Senior Developer, npr. {{URL}}/jobs?search=Senior Developer
+
+166. Search Param
+-u jobController.js fajlu, u funkciji getAllJobs() destruktuiramo varijablu const { search } iz metode req.query
+-kreiramo varijablu objekt const queryObject
+-u metodu Job.find() dodajemo varijablu queryObject
+-dodajemo uslov if (search)
+-u Postman-u testiramo rutu Get All Jobs. npr. {{URL}}/jobs?search
+-u uslov if (search) dodajemo metodu queryObject.$or 
+-u konfiguracioni niz dodajemo opciju za poziciju i kompaniju
+-u Postman-u testiramo rutu Get All Jobs, npr. {{URL}}/jobs?search=Senior
