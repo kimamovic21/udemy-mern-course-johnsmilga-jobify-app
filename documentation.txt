@@ -1296,3 +1296,17 @@ Section 15: Stats Page
 -u komponentu Wrapper dodajemo metodu stats.map()
 -u metodu map() dodajemo komponentu StatItem
 -komponenti StatItem dodajemo prop key i {...item}
+
+162. BarChart Container
+-u komponentu ChartsContainer.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/ChartsContainer.js fajla
+-importujemo React Hook useState
+-importujemo komponente AreaChart i BarChart
+-kreiramo state varijablu const barChart i set funkciju setBarChart
+-funkciji ChartsContainer() dodajemo parametar destruktuirani prop data
+-u jsx-u kreiramo komponentu Wrapper
+-u komponenti Wrapper kreiramo elemente h4 i button 
+-button elementu dodajemo atribut type i dogadaj onClick
+-u dogadaj onClick proslijedujemo funkciju setBarChart(!barChart)
+-u button element dodajemo ternarni uslov za varijablu barChart
+-dodajemo uslov ternarni uslov za varijablu barChart
+-komponentama AreaChart i BarChart dodajemo prop data
