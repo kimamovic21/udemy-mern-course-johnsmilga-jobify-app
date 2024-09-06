@@ -1285,3 +1285,14 @@ Section 15: Stats Page
 -dodajemo uslov {monthlyApplications?.length > 1 && ()} za prikazivanje komponente ChartsContainer
 -komponenti ChartsContainer dodajemo prop data
 -u prop data proslijedujemo vrijednost varijable monthlyApplications
+
+161. Stats Container
+-u komponentu StatsContainer.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/StatsContainer.js fajla
+-importujemo komponentu StatItem.jsx
+-importujemo React ikonice
+-funkciji StatsContainer() dodajemo parametar destruktuirani prop defaultStats
+-kreiramo varijablu niz const stats
+-u jsx-u kreiramo komponentu Wrapper
+-u komponentu Wrapper dodajemo metodu stats.map()
+-u metodu map() dodajemo komponentu StatItem
+-komponenti StatItem dodajemo prop key i {...item}
