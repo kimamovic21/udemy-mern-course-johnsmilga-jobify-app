@@ -1339,3 +1339,10 @@ Section 15: Stats Page
 -komponenti Bar dodajemo dataKey, fill i barSize
 
 164. Charts Container CSS (optional)
+
+
+Section 16: All Jobs Page
+
+165. Query Params
+-u jobController.js fajlu, u metodu Job.find() dodana opcija position
+-u Postman-u testiramo rutu Get All Jobs npr parametrom Senior Developer, npr. {{URL}}/jobs?search=Senior Developer
