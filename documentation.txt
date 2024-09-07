@@ -1368,3 +1368,14 @@ Section 16: All Jobs Page
 -kreiramo varijablu const sortKey
 -metodi await Job.find(queryObject) dodajemo metodu sort(sortKey)
 -destruktuiramo varijablu const { sort } iz metode req.query
+-u Postman-u testiramo rutu Get All Jobs, npr. {{URL}}/jobs?search&jobStatus=declined&jobType=full-time&sort=oldest
+
+169. Pagination
+-metodi await Job.find(queryObject).sort(sortKey) dodajemo funkciju limit()
+-dodajemo metodu skip(1)
+-kreiramo varijable const page, const limit i const skip za paginaciju rezultata poslova
+-u funkciju skip() proslijedujemo varijablu skip
+-u funkciju limit() proslijedujemo varijablu limit
+-kreiramo varijablu const numOfPages
+-u metodu res.status(StatusCodes.OK).json() dodajemo varijable numOfPages i currentPage
+-u Postman-u testiramo rutu Get AllJobs, npr. {{URL}}/jobs?search=e&jobStatus=declined&jobType=full-time&sort=z-a&page=2
