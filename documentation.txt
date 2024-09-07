@@ -1379,3 +1379,24 @@ Section 16: All Jobs Page
 -kreiramo varijablu const numOfPages
 -u metodu res.status(StatusCodes.OK).json() dodajemo varijable numOfPages i currentPage
 -u Postman-u testiramo rutu Get AllJobs, npr. {{URL}}/jobs?search=e&jobStatus=declined&jobType=full-time&sort=z-a&page=2
+
+170. Search Form Setup
+-u komponentu SearchContainer.jsx importujemo stiliziranu komponentu Wrapper iz wrappers/DashboardFormPage.js fajla
+-u jsx-u kreiramo komponentu Wrapper
+-importujemo komponentu Form iz React Router Dom paketa
+-u jsx-u kreiramo komponentu Form
+-komponenti Form dodajemo prop className
+-kreiramo h5 element sa klasom form-title
+-kreiramo div element sa klasom form-center
+-importujemo komponente FormRow.jsx i FormRowSelect.jsx
+-u jsx-u kreiramo jednu FormRow i tri FormRowSelect komponente
+-komponenti FormRow dodajemo prop type, name i defaultValue
+-importujemo varijable JOB_TYPE, JOB_STATUS, JOB_SORT_BY iz constants.js fajla
+-komponentama FormRowSelect dodajemo prop labelText, name, list i defaultValue osim zadnje komponente u koju ne dodajemo labelText
+-importujemo komponentu Link iz paketa React Router Dom
+-u jsx-u kreiramo komponentu Link
+-komponenti Link dodajemo prop to i className
+-importujemo komponentu SubmitBtn.jsx
+-u jsx-u kreiramo komponentu SubmitBtn
+-komponenti SubmitBtn dodajemo prop formBtn
+-u pretrazivacu otvorimo rutu http://localhost:5173/dashboard/all-jobs i kliknemo dugme Submit

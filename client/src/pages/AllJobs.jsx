@@ -4,7 +4,8 @@ import { toast } from 'react-toastify'
 import { JobsContainer, SearchContainer } from '../components'
 import customFetch from '../utils/customFetch'
 
-export const loader = async ({ request }) => {
+export const loader = async () => {
+  console.log('hello')
   try {
     const { data } = await customFetch.get('/jobs')
     console.log(data)
