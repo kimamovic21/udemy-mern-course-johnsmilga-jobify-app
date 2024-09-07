@@ -1362,3 +1362,9 @@ Section 16: All Jobs Page
 -dodajemo uslov if (jobStatus && jobStatus !== 'all')
 -dodajemo uslov if (jobType && jobType !== 'all')
 -u Postman-u testiramo rutu Get All Jobs, npr. {{URL}}/jobs?search&jobStatus=pending
+
+168. Sort
+-u jobController.js fajlu kreiramo objekt varijablu const sortOptions
+-kreiramo varijablu const sortKey
+-metodi await Job.find(queryObject) dodajemo metodu sort(sortKey)
+-destruktuiramo varijablu const { sort } iz metode req.query
