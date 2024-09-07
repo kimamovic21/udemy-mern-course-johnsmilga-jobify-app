@@ -1400,3 +1400,11 @@ Section 16: All Jobs Page
 -u jsx-u kreiramo komponentu SubmitBtn
 -komponenti SubmitBtn dodajemo prop formBtn
 -u pretrazivacu otvorimo rutu http://localhost:5173/dashboard/all-jobs i kliknemo dugme Submit
+
+171. Loader and Query Params
+-u komponenti AllJobs.jsx, funkciji loader dodajemo parametar destruktuirani prop request
+-dodajemo metodu Object.fromEntries([ ... ])
+-vrijednost metode Object.fromEntries() pohranjujemo u varijablu const params
+-u metodu await customFetch.get('/jobs') za dohvacanje poslova dodajemo objekt params
+-otvorimo rutu http://localhost:5173/dashboard/all-jobs u pretrazivacu
+-kad otvorimo rutu kliknemo dugme Submit

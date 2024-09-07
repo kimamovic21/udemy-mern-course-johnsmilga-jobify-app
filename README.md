@@ -5816,17 +5816,26 @@ const params = Object.fromEntries([
 ]);
 ```
 
-new URL(request.url): This creates a new URL object by passing the request.url to the URL constructor. The URL object provides various methods and properties to work with URLs.
+new URL(request.url): This creates a new URL object by passing the request.url to the URL constructor. 
+The URL object provides various methods and properties to work with URLs.
 
-.searchParams: The searchParams property of the URL object gives you access to the query parameters in the URL. It is an instance of the URLSearchParams class, which provides methods to manipulate and access the parameters.
+.searchParams: The searchParams property of the URL object gives you access to the query parameters in the URL. 
+It is an instance of the URLSearchParams class, which provides methods to manipulate and access the parameters.
 
-.entries(): The entries() method of searchParams returns an iterator containing arrays of key-value pairs for each query parameter. Each array contains two elements: the parameter name and its corresponding value.
+.entries(): The entries() method of searchParams returns an iterator containing arrays of key-value pairs for each query parameter. 
+Each array contains two elements: the parameter name and its corresponding value.
 
-([...new URL(request.url).searchParams.entries()]): The spread operator ... is used to convert the iterator obtained from searchParams.entries() into an array. This allows us to pass the array to the Object.fromEntries() method.
+([...new URL(request.url).searchParams.entries()]): The spread operator ... is used to convert the iterator obtained 
+from searchParams.entries() into an array. This allows us to pass the array to the Object.fromEntries() method.
 
-Object.fromEntries(): This static method creates an object from an array of key-value pairs. It takes an iterable (in this case, the array of parameter key-value pairs) and returns a new object where the keys and values are derived from the iterable.
+Object.fromEntries(): This static method creates an object from an array of key-value pairs. It takes an iterable 
+(in this case, the array of parameter key-value pairs) and returns a new object where the keys and values are derived 
+from the iterable.
 
-Putting it all together, the code retrieves the URL from the request.url property, extracts the search parameters using the searchParams property, converts them into an array of key-value pairs using entries(), and finally uses Object.fromEntries() to create an object with the parameter names as keys and their corresponding values. The resulting object, params, contains all the search parameters from the URL.
+Putting it all together, the code retrieves the URL from the request.url property, extracts the search parameters using 
+the searchParams property, converts them into an array of key-value pairs using entries(), and finally uses Object.fromEntries() 
+to create an object with the parameter names as keys and their corresponding values. The resulting object, params, contains all 
+the search parameters from the URL.
 
 #### Submit Form Programmatically
 
