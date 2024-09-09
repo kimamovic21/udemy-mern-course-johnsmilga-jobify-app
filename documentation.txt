@@ -1489,3 +1489,14 @@ Section 16: All Jobs Page
 -vrijednost metode new URLSearchParams(search) pohranjujemo u varijablu const searchParams
 -varijabli searchParams dodajemo metodu set()
 -dodajemo funkciju navigate()
+
+177. Pagination Logic - Complex Approach
+-u komponenti PageBtnContainer.jsx kreiramo funkciju addPageButton()
+-funkciji addPageButton() dodajemo parametre { pageNumber, activeClass }
+-u funkciji addPageButton() kreiramo button element
+-button elementu dodajemo atribute key, className i dogadaj onClick
+-u className dodajemo dinamicku klasu activeClass && 'active'
+-kreiramo funkciju renderPageButtons()
+-u funkciji renderPageButtons() kreiramo varijablu niz const pageButtons
+-u div element btn-container dodajemo funkciju renderPageButtons()
+-dodajemo metode pageButtons.push() i uslove if () za pojavljivanje i sakrivanje brojeva prilikom listanja poslova
