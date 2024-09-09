@@ -1517,3 +1517,8 @@ Section 17: Initial Deploy
 -u terminalu ukucamo komandu node server
 
 180. Render Intro
+
+181. Deploy App
+-otvorimo web stranicu https://render.com/
+-kreiramo novi servis za nas MERN Jobify App projekt
+-na web stranici Render, u nas projekt dodamo varijable iz .env fajla
