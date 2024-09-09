@@ -1442,3 +1442,13 @@ Section 16: All Jobs Page
 -u funkciju setTimeout() dodajemo funkciju onChange(form)
 -u komponentu FormRow za pretragu poslova, u dogadaj onChange proslijedujemo funkciju debounce sa parametrom form
 -u funkciju debounce(form) proslijedujemo funkciju submit(form)
+
+174. Pagination Setup
+-u folderu components kreiramo komponentu PageBtnContainer.jsx
+-u komponenti JobsContainer.jsx, destruktuiramo varijable const { totalJobs, numOfPages } iz varijable data
+-kreiramo h5 element
+-u h5 element dodajemo varijablu totalJobs
+-importujemo komponentu PageBtnContainer.jsx
+-kreiramo uslov numOfPages za prikazivanje komponente PageBtnContainer
+-u komponentu PageBtnContainer.jsx importujemo i kreiramo funkciju useAllJobsContext()
+-destruktuiramo varijable const { data: { numOfPages, currentPage } } iz funkcije useAllJobsContext()
