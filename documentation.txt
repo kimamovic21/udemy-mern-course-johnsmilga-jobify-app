@@ -1500,3 +1500,5 @@ Section 16: All Jobs Page
 -u funkciji renderPageButtons() kreiramo varijablu niz const pageButtons
 -u div element btn-container dodajemo funkciju renderPageButtons()
 -dodajemo metode pageButtons.push() i uslove if () za pojavljivanje i sakrivanje brojeva prilikom listanja poslova
+
+178. Button Container CSS (Optional)
