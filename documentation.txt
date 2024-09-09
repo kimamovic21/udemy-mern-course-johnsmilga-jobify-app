@@ -1515,3 +1515,5 @@ Section 17: Initial Deploy
 -u server.js fajlu kreiramo metodu app.get('*')
 -u metodu app.get() dodajemo metodu res.sendFile()
 -u terminalu ukucamo komandu node server
+
+180. Render Intro
