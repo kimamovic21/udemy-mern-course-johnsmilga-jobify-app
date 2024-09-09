@@ -1430,3 +1430,15 @@ Section 16: All Jobs Page
 -destruktuiramo varijablu const { searchValues } iz funkcije useAllJobsContext()
 -iz varijable searchValues destruktuiramo varijable const { search, jobStatus, jobType, sort }
 -u Postman-u testiramo rutu Get All Jobs, npr. {{URL}}/jobs?search=e&jobStatus=declined&jobType=full-time&sort=z-a&page=1
+
+173. Debounce
+-u komponenti SearchContainer.jsx kreiramo funkciju debounce() sa parametrom onChange
+-u funkciji debounce() kreiramo varijablu let timeout
+-u funkciji debounce() kreiramo anonimnu funkciju sa parametrom e
+-u anonimnoj funkciji kreiramo varijablu const form
+-dodajemo funkciju onChange(form)
+-kreiramo funkciju setTimeout()
+-vrijednost funkcije setTimeout() pohranjujemo u varijablu const timeout
+-u funkciju setTimeout() dodajemo funkciju onChange(form)
+-u komponentu FormRow za pretragu poslova, u dogadaj onChange proslijedujemo funkciju debounce sa parametrom form
+-u funkciju debounce(form) proslijedujemo funkciju submit(form)

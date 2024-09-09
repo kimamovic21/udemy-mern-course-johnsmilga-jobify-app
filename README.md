@@ -5914,7 +5914,9 @@ export default SearchContainer;
 
 [JS Nuggets - Debounce](https://youtu.be/tYx6pXdvt1s)
 
-In JavaScript, debounce is a way to limit how often a function gets called. It helps prevent rapid or repeated function executions by introducing a delay. This is useful for tasks like handling user input, where you want to wait for a pause before triggering an action to avoid unnecessary processing.
+In JavaScript, debounce is a way to limit how often a function gets called. It helps prevent rapid or repeated function 
+executions by introducing a delay. This is useful for tasks like handling user input, where you want to wait for a pause 
+before triggering an action to avoid unnecessary processing.
 
 ```js
 const debounce = (onChange) => {
