@@ -10,7 +10,7 @@ export const authenticateUser = async (req, res, next) => {
 
   try {
     const { userId, role } = verifyJWT(token);
-    const testUser = userId === '66d9a3727a78da9c0c01eaad';
+    const testUser = userId === process.env.TEST_USER_ID;
     req.user = { userId, role, testUser };
     next();
   } catch (error) {
@@ -19,7 +19,6 @@ export const authenticateUser = async (req, res, next) => {
 };
 
 export const authorizePermissions = (...roles) => {
-  console.log(roles);
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
       throw new UnauthorizedError('Unauthorized to access this route');

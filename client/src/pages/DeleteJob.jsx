@@ -3,7 +3,6 @@ import { toast } from 'react-toastify'
 import customFetch from '../utils/customFetch'
 
 export const action = async ({ params }) => {
-  console.log(params)
   try {
     await customFetch.delete(`/jobs/${params.id}`)
     toast.success('Job deleted successfully!')

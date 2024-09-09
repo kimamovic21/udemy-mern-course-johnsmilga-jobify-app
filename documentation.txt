@@ -1502,3 +1502,16 @@ Section 16: All Jobs Page
 -dodajemo metode pageButtons.push() i uslove if () za pojavljivanje i sakrivanje brojeva prilikom listanja poslova
 
 178. Button Container CSS (Optional)
+
+
+Section 17: Initial Deploy
+
+179. Local Build
+-u komponenti Register.jsx, u jsx-u komponentama izbrisemo prop defaultValue
+-u komponenti Login.jsx, u jsx-u komponentama izbrisemo prop defaultValue
+-u terminalu navigiramo u folder cliend sa komandom cd cliend
+-ukucamo komandu npm run build
+-nakon sto se kreira folder dist u folderu client, prebacimo sve fajlove u folder public
+-u server.js fajlu kreiramo metodu app.get('*')
+-u metodu app.get() dodajemo metodu res.sendFile()
+-u terminalu ukucamo komandu node server

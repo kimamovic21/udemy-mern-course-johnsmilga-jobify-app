@@ -8,7 +8,6 @@ import Wrapper from '../assets/wrappers/StatsContainer'
 export const loader = async () => {
   try {
     const { data } = await customFetch.get('/users/admin/app-stats')
-    console.log(data)
     return data
   } catch (error) {
     toast.error('You are not authorized to view this page!')
