@@ -1466,3 +1466,26 @@ Section 16: All Jobs Page
 -u metodi map() kreiramo button element sa atributima className i key
 -u className proslijedujemo dinamicku klasu u zavisnosti na kojoj smo trenutno stranici
 -u button element dodajemo varijablu pageNumber
+
+176. Pagination Logic - First Approach
+-u komponenti PageBtnContainer.jsx kreiramo funkciju handlePageChange() sa parametrom pageNumber
+-u div elementu sa klasom btn-container, button elementu dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo anonimnu funkciju
+-u anonimnu funkciju proslijedujemo funkciju handlePageChange(pageNumber)
+-u button element prev dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo anonimnu funkciju
+-u anonimnoj funkciji kreiramo varijablu let prevPage
+-dodajemo uslov if (prevPage < 1)
+-dodajemo funkciju handlePageChange(prevPage)
+-u button element prev dodajemo dogadaj onClick
+-u dogadaj onClick proslijedujemo anonimnu funkciju
+-u anonimnoj funkciji kreiramo varijablu let nextPage
+-dodajemo uslov if (nextPage > numOfPages)
+-dodajemo funkciju handlePageChange(nextPage)
+-importujemo funkcije useNavigate i useLocation iz paketa React Router Dom
+-destruktuiramo varijable const { search, pathname } iz funkcije useLocation()
+-vrijednost funkcije useNavigate() pohranjujemo u varijablu const navigate
+-u funkciji handlePageChange() kreiramo metodu new URLSearchParams(search)
+-vrijednost metode new URLSearchParams(search) pohranjujemo u varijablu const searchParams
+-varijabli searchParams dodajemo metodu set()
+-dodajemo funkciju navigate()
