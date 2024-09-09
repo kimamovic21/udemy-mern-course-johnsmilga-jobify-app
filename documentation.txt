@@ -1281,7 +1281,7 @@ Section 15: Stats Page
 -vrijednost funkcije useLoaderData() pohranjujemo u destruktuirane varijable const { defaultStats, monthlyApplications }
 -importujemo komponente StatsContainer.jsx i ChartsContainer.jsx
 -u jsx-u komponenti StatsContainer dodajemo prop defaultStats
--u prop defaultStats proslijedujemo vrijednost variable defaultStats
+-u prop defaultStats proslijedujemo vrijednost varijable defaultStats
 -dodajemo uslov {monthlyApplications?.length > 1 && ()} za prikazivanje komponente ChartsContainer
 -komponenti ChartsContainer dodajemo prop data
 -u prop data proslijedujemo vrijednost varijable monthlyApplications
@@ -1408,3 +1408,25 @@ Section 16: All Jobs Page
 -u metodu await customFetch.get('/jobs') za dohvacanje poslova dodajemo objekt params
 -otvorimo rutu http://localhost:5173/dashboard/all-jobs u pretrazivacu
 -kad otvorimo rutu kliknemo dugme Submit
+
+172. Controlled Inputs
+-u komponentu SearchContainer.jsx importujemo i kreiramo funkciju useSubmit() iz paketa React Router Dom
+-vrijednost funkcije useSubmit() pohranjujemo u varijablu const submit
+-komponenti FormRow dodajemo dogadaj onChange
+-u dogadaj onChange proslijedujemo vrijednost funkcije submit(e.currentTarget.form)
+-u komponenti FormRow.jsx, funkciji FormRow() dodajemo parametar destruktuirani prop onChange
+-u jsx-u input elementu dodajemo dogadaj onChange
+-u dogadaj onChange proslijedujemo vrijednost prop onChange
+-u komponenti FormRowSelect.jsx, funkciji FormRowSelect() dodajemo parametar destruktuirani prop onChange
+-u jsx-u select elementu dodajemo dogadaj onChange
+-u dogadaj onChange proslijedujemo vrijednost prop onChange
+-u komponenti SearchContainer.jsx komponentama FormRowSelect dodajemo dogadaj onChange
+-u prop onChange proslijedujemo anonimne funkcije sa parametrom e
+-u anonimne funkcije proslijedujemo funkcije submit(e.currentTarget.form)
+-u komponentu AllJobs.jsx, u return za objekt data dodajemo varijablu searchValues
+-u jsx-u destruktuiramo varijablu searchValues iz funkcije useLoaderData()
+-u prop value dodajemo varijablu searchValues
+-u komponentu SearchContainer.jsx importujemo i kreiramo funkciju useAllJobsContext
+-destruktuiramo varijablu const { searchValues } iz funkcije useAllJobsContext()
+-iz varijable searchValues destruktuiramo varijable const { search, jobStatus, jobType, sort }
+-u Postman-u testiramo rutu Get All Jobs, npr. {{URL}}/jobs?search=e&jobStatus=declined&jobType=full-time&sort=z-a&page=1
