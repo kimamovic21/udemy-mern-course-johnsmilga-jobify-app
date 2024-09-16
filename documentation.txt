@@ -1522,3 +1522,16 @@ Section 17: Initial Deploy
 -otvorimo web stranicu https://render.com/
 -kreiramo novi servis za nas MERN Jobify App projekt
 -na web stranici Render, u nas projekt dodamo varijable iz .env fajla
+
+
+Section 18: React Query and Other Extra Features
+
+182. Build Front-End Programmatically
+-u package.json fajl dodajemo komandu setup-production-app
+-u server.js fajlu, u metodu app.get() i app.use() dodajemo u funkciju resolve() folder client/dist
+-obrisemo folder node_modules za backend
+-u folderu client obrisemo folder node_modules
+-u terminalu ukucamo komandu npm run setup-production-app
+-u terminalu ukucamo komandu node server da pokrenemo projekt lokalno
+-na stranici Render odaberemo opciju postavke
+-u opciju Build Command dodajemo komandu npm run setup-production-app
