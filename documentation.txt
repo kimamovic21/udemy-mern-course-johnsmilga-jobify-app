@@ -1548,3 +1548,13 @@ Section 18: React Query and Other Extra Features
 -u funkciji formatImage() kreiramo varijablu const fileExtension
 -dodajemo metodu return parser.format()
 -u userController.js fajlu, u funkciji updatedUser() dodajemo metodu v2.uploader.upload(file)
+
+184. Global Loading
+-u folderu components kreiramo komponentu Loading.jsx
+-u komponenti Loading.jsx kreiramo div element sa klasom loading
+-u index.js fajlu eksportujemo komponentu Loading.jsx
+-u DashboardLayout.jsx komponentu importujemo i kreiramo funkciju useNavigation()
+-vrijednost funkcije useNavigation() pohranjujemo u varijablu const navigation
+-kreiramo varijablu const isPageLoading
+-importujemo komponentu Loading.jsx
+-u jsx-u dodajemo ternarni uslov za varijablu isPageLoading
