@@ -1558,3 +1558,14 @@ Section 18: React Query and Other Extra Features
 -kreiramo varijablu const isPageLoading
 -importujemo komponentu Loading.jsx
 -u jsx-u dodajemo ternarni uslov za varijablu isPageLoading
+
+185. React Query - Install
+-otvorimo web stranicu https://tanstack.com/
+-u terminalu navigiramo u folder client sa komandom cd client i instaliramo Tanstack pakete
+-u komponentu App.jsx importujemo funkciju QueryClient, komponente QueryClientProvider i ReactQueryDevtools iz paketa Tanstack
+-dodajemo metodu new QueryClient()
+-vrijednost metode new QueryClient() pohranjujemo u varijablu const queryClient
+-u jsx-u, kreiramo komponente QueryClientProvider i ReactQueryDevtools
+-komponenti QueryClientProvider dodajemo prop client 
+-u prop client proslijedujemo vrijednost varijable queryClient
+-komponenti ReactQueryDevtools dodajemo prop initialIsOpen
