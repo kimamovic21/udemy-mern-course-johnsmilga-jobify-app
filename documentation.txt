@@ -1535,3 +1535,16 @@ Section 18: React Query and Other Extra Features
 -u terminalu ukucamo komandu node server da pokrenemo projekt lokalno
 -na stranici Render odaberemo opciju postavke
 -u opciju Build Command dodajemo komandu npm run setup-production-app
+
+183. Update User - Fix
+-otvorimo link https://www.npmjs.com/package/datauri
+-u multerMiddleware.js fajl dodajemo opciju multer.memoryStorage()
+-importujemo instancu DataParser iz paketa datauri/parser.js
+-importujemo instancu path
+-kreiramo i eksportujemo funkciju formatImage()
+-u userController.js fajl importujemo funkciju formatImage
+-u funkciji updatedUser() izbrisemo metodu await fs.unlink()
+-u multerMiddleware.js fajlu kreiramo varijablu const parser
+-u funkciji formatImage() kreiramo varijablu const fileExtension
+-dodajemo metodu return parser.format()
+-u userController.js fajlu, u funkciji updatedUser() dodajemo metodu v2.uploader.upload(file)
