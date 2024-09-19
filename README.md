@@ -6510,13 +6510,20 @@ const data = useQuery({
 });
 ```
 
-const data = useQuery({ ... });: This line declares a constant variable named data and assigns it the result of the useQuery hook. The useQuery hook is provided by React Query and is used to perform data fetching.
+const data = useQuery({ ... });: This line declares a constant variable named data and assigns it the result of the useQuery hook. 
+The useQuery hook is provided by React Query and is used to perform data fetching.
 
-queryKey: ['stats'],: The queryKey property is an array that serves as a unique identifier for the query. In this case, the query key is set to ['stats'], indicating that this query is fetching statistics related to jobs.
+queryKey: ['stats'],: The queryKey property is an array that serves as a unique identifier for the query. In this case, the query 
+key is set to ['stats'], indicating that this query is fetching statistics related to jobs.
 
-queryFn: () => customFetch.get('/jobs/stats'),: The queryFn property specifies the function that will be executed when the query is triggered. In this case, it uses an arrow function that calls customFetch.get('/jobs/stats'). The customFetch object is likely a custom wrapper around the fetch function or an external HTTP client library, used to make the actual API request to retrieve job statistics.In React Query, the queryFn property expects a function that returns a promise. The promise should resolve with the data you want to fetch and store in the query cache.
+queryFn: () => customFetch.get('/jobs/stats'),: The queryFn property specifies the function that will be executed when the query 
+is triggered. In this case, it uses an arrow function that calls customFetch.get('/jobs/stats'). The customFetch object is likely 
+a custom wrapper around the fetch function or an external HTTP client library, used to make the actual API request to retrieve 
+job statistics.In React Query, the queryFn property expects a function that returns a promise. The promise should resolve with the 
+data you want to fetch and store in the query cache.
 
-customFetch.get('/jobs/stats'): This line is making an HTTP GET request to the /jobs/stats endpoint, which is the API route that provides the job statistics data.
+customFetch.get('/jobs/stats'): This line is making an HTTP GET request to the /jobs/stats endpoint, which is the API route that 
+provides the job statistics data.
 
 #### Get Stats with React Query
 
