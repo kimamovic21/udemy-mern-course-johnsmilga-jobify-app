@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from 'react'
-import { Outlet, redirect, useLoaderData, useNavigate, useNavigation } from 'react-router-dom'
+import { Outlet, redirect, useNavigate, useNavigation } from 'react-router-dom'
+import { useQuery } from '@tanstack/react-query'
 import { toast } from 'react-toastify'
 import { BigSidebar, Navbar, SmallSidebar, Loading } from '../components'
 import { checkDefaultTheme } from '../App'
 import customFetch from '../utils/customFetch'
 import Wrapper from '../assets/wrappers/Dashboard'
-import { useQuery } from '@tanstack/react-query'
 
 const DashboardContext = createContext()
 
@@ -50,6 +50,7 @@ const DashboardLayout = ({ queryClient }) => {
   const logoutUser = async () => {
     navigate('/')
     await customFetch.get('/auth/logout')
+    queryClient.invalidateQueries()
     toast.success('Logging out...')
   }
 

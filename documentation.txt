@@ -1608,3 +1608,13 @@ Section 18: React Query and Other Extra Features
 -importujemo i kreiramo funkciju useQuery()
 -u funkciji DashboardLayout() vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { user }
 -funkciji useQuery() dodajemo varijablu userQuery
+
+190. Invalidate Queries
+-u komponenti App.jsx, u funkcije loginAction i profileAction dodajemo varijablu queryClient
+-u komponenti Login.jsx, u funkciju action() dodajemo jos jednu funkciju sa parametrom queryClient
+-u blok koda try dodajemo metodu queryClient.invalidateQueries()
+-u komponenti DashboardLayout.jsx, u funkciju logoutUser() dodajemo metodu queryClient.invalidateQueries()
+-u komponentu Profile.jsx, u funkciju action() dodajemo jos jednu funkciju sa parametrom queryClient
+-u blok koda try dodajemo metodu queryClient.invalidateQueries(['user'])
+-dodajemo return redirect('/dashboard')
+-u blok koda catch dodajemo return null
