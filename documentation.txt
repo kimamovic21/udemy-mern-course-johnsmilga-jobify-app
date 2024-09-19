@@ -1633,3 +1633,14 @@ Section 18: React Query and Other Extra Features
 -u komponenti AddJob.jsx, u funkciju action() dodajemo funkciju sa parametrom queryClient
 -u blok koda try dodajemo metodu queryClient.invalidateQueries(['jobs'])
 -isti postupak ponovimo u komponentama EditJob.jsx i DeleteJob.jsx
+
+192. React Query - Edit Job
+-u komponenti App.jsx, u objekt ruti za komponenti EditJob, funkciji editJobLoader() dodajemo varijablu queryClient
+-u komponenti EditJob.jsx kreiramo funkciju singleJobQuery sa parametrom id
+-u funkciju loader() dodajemo metodu await queryClient.ensureQueryData(singleJobQuery(params.id))
+-dodajemo return params.id
+-u funkciji EditJob() vrijednost funkcije useLoaderData() pohranjujemo u varijablu const id
+-importujemo i kreiramo funkciju useQuery()
+-u funkciju useQuery() dodajemo funkciju singleJobQuery(id)
+-vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { data }
+-u funkciji action(), u blok koda try dodajemo metodu queryClient.invalidateQueries(['job'])
