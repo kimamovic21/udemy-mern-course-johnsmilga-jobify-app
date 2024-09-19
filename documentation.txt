@@ -1596,3 +1596,15 @@ Section 18: React Query and Other Extra Features
 -u funkciju loader() dodajemo jos jednu funkciju sa parametrom queryClient
 -vrijednost ove metode pohranjujemo u varijablu const data
 -dodajemo return data
+
+189. React Query - Current User
+-u komponenti App.jsx, u objekt ruti za komponentu DashboardLayout, komponenti DashboardLayout dodajemo prop queryClient
+-u prop queryClient proslijedujemo varijablu queryClient
+-u key - value paru za funkciju loader, funkciji dashboardLoader() dodajemo varijablu queryClient
+-u komponenti DashboardLayout.jsx, u funkciju loader() dodajemo jos jednu funkciju sa parametrom queryClient
+-kreiramo objekt varijablu const userQuery
+-u funkciji loader, u blok koda try dodajemo metodu await queryClient.ensureQueryData(userQuery)
+-funkciji DashboardLayout() dodajemo parametar destruktuirani prop queryClient
+-importujemo i kreiramo funkciju useQuery()
+-u funkciji DashboardLayout() vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { user }
+-funkciji useQuery() dodajemo varijablu userQuery
