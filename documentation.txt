@@ -1578,3 +1578,12 @@ Section 18: React Query and Other Extra Features
 -u komponentu App.jsx importujemo komponentu ErrorElement.jsx
 -u objekt ruti za komponentu Stats dodajemo key - value par errorElement i komponentu ErrorElement
 -u jsx dodajemo return
+
+187. First Query with React Query
+-u main.jsx fajlu uklonimo komponentu StrictMode
+-u komponentu Stats.importujemo i kreiramo funkciju useQuery()
+-u funkciji useQuery() kreiramo objekt sa vrijednostima queryKey i queryFn
+-vrijednost funkcije useQuery() pohranjujemo u varijablu const response
+-vrijednost funkcije useQuery() pohranjujemo u destruktuirane varijable const { isLoading, isError, data }
+-dodajemo uslove if (isLoading) i if (isError)
+-destruktuiramo varijable const { defaultStats, monthlyApplications } iz varijable data.data
