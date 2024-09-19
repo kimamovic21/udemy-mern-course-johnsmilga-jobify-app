@@ -1618,3 +1618,18 @@ Section 18: React Query and Other Extra Features
 -u blok koda try dodajemo metodu queryClient.invalidateQueries(['user'])
 -dodajemo return redirect('/dashboard')
 -u blok koda catch dodajemo return null
+
+191. React Query - All Jobs
+-u komponenti AllJobs.jsx kreiramo funkciju allJobsQuery() sa parametrom params
+-u komponenti App.jsx, u objekt ruti za komponentu AllJobs dodajemo u funkciju allJobsLoader() varijablu queryClient
+-u komponenti AllJobs.jsx, u funkciju loader() dodajemo funkciju sa parametrom queryClient
+-dodajemo metodu await queryClient.ensureQueryData(allJobsQuery(params))
+-importujemo i kreiramo funkciju useQuery()
+-vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { data }
+-u funkciji useQuery() dodajemo funkciju allJobsQuery(searchValues)
+-u funkciji allJobsQuery(), destruktuiramo varijable const { search, jobStatus, jobType, sort, page } iz varijable params
+-u niz queryKey dodajemo varijable
+-u komponenti App.jsx, u objekt rute za komponente AddJob, EditJob i akciju za brisanje posla dodajemo u funkcije varijablu queryClient
+-u komponenti AddJob.jsx, u funkciju action() dodajemo funkciju sa parametrom queryClient
+-u blok koda try dodajemo metodu queryClient.invalidateQueries(['jobs'])
+-isti postupak ponovimo u komponentama EditJob.jsx i DeleteJob.jsx
