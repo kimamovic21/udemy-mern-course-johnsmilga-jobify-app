@@ -3,12 +3,9 @@ import { ChartsContainer, StatsContainer } from '../components'
 import customFetch from '../utils/customFetch'
 
 export const loader = async () => {
-  try {
+  // const { data } = await customFetch.get('/jobs/statss')
     const { data } = await customFetch.get('/jobs/stats')
     return data
-  } catch (error) {
-    return error
-  }
 }
 
 const Stats = () => {

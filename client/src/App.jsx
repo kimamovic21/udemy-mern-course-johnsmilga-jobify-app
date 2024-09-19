@@ -26,6 +26,7 @@ import { action as deleteJobAction } from './pages/DeleteJob';
 import { loader as adminLoader } from './pages/Admin';
 import { action as profileAction } from './pages/Profile';
 import { loader as statsLoader } from './pages/Stats';
+import ErrorElement from './components/ErrorElement';
 
 export const checkDefaultTheme = () => {
   const isDarkTheme = localStorage.getItem('darkTheme') === 'true'
@@ -77,6 +78,7 @@ const router = createBrowserRouter([
             path: 'stats', 
             element: <Stats />,
             loader: statsLoader,
+            errorElement: <ErrorElement />
           },
           {
             path: 'all-jobs',
@@ -110,10 +112,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  <QueryClientProvider client={queryClient}>
-    <RouterProvider router={router} />
-    <ReactQueryDevtools initialIsOpen={false} />
-  </QueryClientProvider>
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
 };
 
 export default App;

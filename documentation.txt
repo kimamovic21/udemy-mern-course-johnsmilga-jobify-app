@@ -1569,3 +1569,12 @@ Section 18: React Query and Other Extra Features
 -komponenti QueryClientProvider dodajemo prop client 
 -u prop client proslijedujemo vrijednost varijable queryClient
 -komponenti ReactQueryDevtools dodajemo prop initialIsOpen
+
+186. Page ErrorElement
+-u folderu components kreiramo komponentu ErrorElement.jsx
+-u komponentu ErrorElement.jsx importujemo i kreiramo funkciju useRouteError()
+-vrijednost funkcije useRouteError() pohranjujemo u varijablu const error
+-u jsx-u kreiramo h4 element
+-u komponentu App.jsx importujemo komponentu ErrorElement.jsx
+-u objekt ruti za komponentu Stats dodajemo key - value par errorElement i komponentu ErrorElement
+-u jsx dodajemo return
