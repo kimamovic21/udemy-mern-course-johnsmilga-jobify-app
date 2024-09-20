@@ -1644,3 +1644,12 @@ Section 18: React Query and Other Extra Features
 -u funkciju useQuery() dodajemo funkciju singleJobQuery(id)
 -vrijednost funkcije useQuery() pohranjujemo u destruktuiranu varijablu const { data }
 -u funkciji action(), u blok koda try dodajemo metodu queryClient.invalidateQueries(['job'])
+
+193. Axios Interceptors
+-u komponenti DashboardLayout.jsx kreiramo state varijablu const isAuthError i set funkciju setIsAuthErrors
+-dodajemo metodu customFetch.interceptors.response.use()
+-u funkciju use() dodajemo dvije anonimne funkcije 
+-importujemo i kreiramo React Hook funkciju useEffect()
+-prvi argument funkcije useEffect() je anonimna funkcija, a drugi argument niz i varijabla isAuthError
+-u anonimnu funkciju dodajemo uslov if(!isAuthError) i funkciju logoutUser()
+-u komponentu EditJob.jsx dodajemo u funkciju invalidateQueries() params.id
