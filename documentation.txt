@@ -1653,3 +1653,13 @@ Section 18: React Query and Other Extra Features
 -prvi argument funkcije useEffect() je anonimna funkcija, a drugi argument niz i varijabla isAuthError
 -u anonimnu funkciju dodajemo uslov if(!isAuthError) i funkciju logoutUser()
 -u komponentu EditJob.jsx dodajemo u funkciju invalidateQueries() params.id
+
+194. Security Packages
+-u server.js fajl importujemo instance helmet i mongoSanitize iz paketa Helmet i Express Mongo Sanitize
+-kreiramo dvije metode app.use() za funkcije helmet() i mongoSanitize()
+-u authRouter.js fajl importujemo instancu rateLimiter iz paketa Express Rate Limit
+-kreiramo funkciju rateLimiter()
+-u funkciju rateLimiter() dodajemo konfiguracioni objekt
+-u konfiguracioni objekt dodajemo opcije windowMs, max i message
+-vrijednost funkcije rateLimiter() pohranjujemo u varijablu const apiLimiter
+-u metode router.post() za registraciju i prijavu dodajemo funkciju apiLimiter 
