@@ -3,6 +3,14 @@
 
 ## Original Code Source: https://github.com/john-smilga/mern-jobify-v2
 
+## Udemy Link: https://www.udemy.com/course/mern-stack-course-mongodb-express-react-and-nodejs
+
+## Demo Live: https://udemy-mern-course-johnsmilga-jobify-app.onrender.com
+
+- npm install
+- npm run dev
+
+
 
 #### Complete App
 
